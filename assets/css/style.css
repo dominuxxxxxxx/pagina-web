@@ -271,6 +271,15 @@ p { margin: 0 0 1em; }
 
 .badge svg { width: 15px; height: 15px; }
 
+.badge-link {
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.badge-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
 .hero h1 {
   font-size: clamp(2.1rem, 5.5vw, 3.2rem);
   margin-bottom: 16px;
@@ -404,6 +413,21 @@ p { margin: 0 0 1em; }
 .about-figure .stat span {
   font-size: .78rem;
   opacity: .9;
+}
+
+.review-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-weight: 800;
+  font-size: .88rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.5);
+  padding-bottom: 2px;
+  transition: border-color .18s ease;
+}
+
+.review-link:hover {
+  border-color: #fff;
 }
 
 .about-text p {
