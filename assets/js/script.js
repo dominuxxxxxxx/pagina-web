@@ -20,11 +20,66 @@ function loadAnalytics() {
   gtag('config', GA_MEASUREMENT_ID);
 }
 
+// Recria os cards do cardápio a partir de content/products.json, editável
+// pelo painel /admin. Se o arquivo não carregar (offline, JS desativado),
+// os cards estáticos já presentes no HTML permanecem como estão.
+function renderProducts(items) {
+  var grid = document.getElementById('productGrid');
+  if (!grid || !Array.isArray(items) || !items.length) return;
+
+  grid.innerHTML = '';
+
+  items.forEach(function (item) {
+    var card = document.createElement('article');
+    card.className = 'product-card';
+
+    var img = document.createElement('img');
+    img.src = item.image || 'assets/img/icon-bolo.svg';
+    img.alt = item.name ? item.name + ' artesanais' : '';
+    img.width = 96;
+    img.height = 96;
+    card.appendChild(img);
+
+    var h3 = document.createElement('h3');
+    h3.textContent = item.name || '';
+    card.appendChild(h3);
+
+    var desc = document.createElement('p');
+    desc.textContent = item.description || '';
+    card.appendChild(desc);
+
+    if (item.price) {
+      var price = document.createElement('span');
+      price.className = 'product-price';
+      price.textContent = item.price;
+      card.appendChild(price);
+    }
+
+    var link = document.createElement('a');
+    link.className = 'btn btn-whatsapp';
+    link.target = '_blank';
+    link.rel = 'noopener';
+    var message = item.whatsappText || ('Olá, quero saber mais sobre ' + (item.name || 'os produtos') + '!');
+    link.href = 'https://wa.me/554136672764?text=' + encodeURIComponent(message);
+    link.textContent = 'Peça pelo WhatsApp';
+    card.appendChild(link);
+
+    grid.appendChild(card);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  fetch('content/products.json', { cache: 'no-store' })
+    .then(function (res) { return res.ok ? res.json() : null; })
+    .then(function (data) {
+      if (data && data.items) renderProducts(data.items);
+    })
+    .catch(function () { /* mantém os cards estáticos do HTML */ });
 
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieAccept');

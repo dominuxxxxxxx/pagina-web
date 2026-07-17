@@ -498,6 +498,8 @@ p { margin: 0 0 1em; }
   width: 96px;
   height: 96px;
   margin: 0 auto 18px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .product-card h3 {

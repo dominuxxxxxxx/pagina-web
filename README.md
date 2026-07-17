@@ -6,11 +6,15 @@ Pinhais - PR. HTML/CSS/JS estático, sem build, mobile-first.
 ## Estrutura
 
 ```
-index.html            Página única (hero, sobre nós, cardápio, encomendas,
-                       localização, contato)
-assets/css/style.css   Estilos (paleta terracota/pastel, responsivo)
-assets/js/script.js    Pequenas interações (ano do rodapé)
-assets/img/            Ícones SVG das categorias, favicon e logo
+index.html              Página única (hero, sobre nós, cardápio, encomendas,
+                         localização, contato)
+assets/css/style.css     Estilos (paleta terracota/pastel, responsivo)
+assets/js/script.js      Interações + carrega o cardápio de content/products.json
+assets/img/               Ícones SVG das categorias, favicon e logo
+assets/img/uploads/        Fotos enviadas pelo painel /admin
+content/products.json    Cardápio (nome, descrição, preço, foto) — editável
+                         via /admin ou direto no arquivo
+admin/                   Painel de edição (Decap CMS)
 ```
 
 ## Rodar localmente
@@ -40,10 +44,9 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 - **WhatsApp**: os links usam `https://wa.me/554136672764`. Se o número
   mudar, atualize em todas as ocorrências (botão flutuante, header, hero,
   seção de encomendas e rodapé).
-- **Preços**: os valores "A partir de R$..." no cardápio são **ilustrativos**
-  (placeholder), marcados com "*" e um aviso de "sujeitos a confirmação".
-  Atualize com os preços reais em `.product-price` dentro de cada
-  `.product-card` em `index.html` assim que tiver os valores definidos.
+- **Preços e fotos do cardápio**: os valores "A partir de R$..." são
+  **ilustrativos** (placeholder). Podem ser atualizados direto pelo painel
+  `/admin` (veja seção abaixo) ou editando `content/products.json`.
 
 ## SEO local
 
@@ -63,6 +66,35 @@ Analytics 4 prontos, mas desativados até você configurar:
    `assets/js/script.js` pelo ID real.
 3. O script só carrega depois que o visitante aceita o aviso de cookies
    (botão "Entendi" no rodapé da página).
+
+## Painel de edição para o dono/a (/admin)
+
+O site usa [Decap CMS](https://decapcms.org) para que quem administra a
+confeitaria consiga editar o cardápio (nome, descrição, preço, foto) sem
+mexer em código — tudo pelo navegador, em `seusite.com/admin`. Cada edição
+salva vira um commit automático neste repositório.
+
+**Isso só funciona depois de publicar no Netlify** (o `netlify.toml` já
+deixa o resto pronto). Ative uma única vez:
+
+1. No painel do site no Netlify, vá em **Site configuration → Identity**
+   e clique em **Enable Identity**.
+2. Em **Identity → Registration**, deixe como **Invite only** (assim só
+   quem for convidado consegue entrar no `/admin`).
+3. Em **Identity → Services → Git Gateway**, clique em **Enable Git
+   Gateway** (é isso que permite o painel salvar as edições como commits).
+4. Em **Identity → Invite users**, convide o e-mail do dono/a da
+   confeitaria. Ele(a) vai receber um e-mail para definir uma senha e cair
+   direto no painel.
+5. Depois disso, é só acessar `seusite.com/admin`, logar, e editar os
+   produtos do cardápio (inclusive trocar as fotos placeholder por fotos
+   reais direto pelo painel, sem precisar de ninguém mexer no código).
+
+Se quiser ampliar o que é editável pelo painel (por exemplo, horário de
+funcionamento ou o texto "Sobre nós"), é só adicionar os campos
+correspondentes em `admin/config.yml` e ligar esses campos no
+`assets/js/script.js` — hoje só o cardápio está conectado ao painel, o
+resto do texto do site continua fixo no `index.html`.
 
 ## Passos operacionais (fora do código)
 

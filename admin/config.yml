@@ -1,0 +1,43 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/img/uploads"
+public_folder: "assets/img/uploads"
+
+locale: "pt"
+
+collections:
+  - name: "products"
+    label: "Cardápio"
+    files:
+      - file: "content/products.json"
+        label: "Produtos"
+        name: "products"
+        format: "json"
+        fields:
+          - label: "Produtos"
+            name: "items"
+            widget: "list"
+            summary: "{{name}} — {{price}}"
+            fields:
+              - label: "Identificador (não altere)"
+                name: "id"
+                widget: "string"
+              - label: "Nome"
+                name: "name"
+                widget: "string"
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+              - label: "Preço"
+                name: "price"
+                widget: "string"
+                hint: "Ex: A partir de R$ 45*"
+              - label: "Foto"
+                name: "image"
+                widget: "image"
+              - label: "Mensagem padrão do WhatsApp"
+                name: "whatsappText"
+                widget: "string"
+                required: false

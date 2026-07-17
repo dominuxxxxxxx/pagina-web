@@ -186,7 +186,7 @@
         <h2>Nossos produtos</h2>
         <p>Uma seleção que passa de geração em geração — ideal para festas, encomendas do dia a dia ou para adoçar a tarde.</p>
       </div>
-      <div class="product-grid">
+      <div class="product-grid" id="productGrid">
         <article class="product-card">
           <img src="assets/img/icon-bolo.svg" alt="Bolos artesanais" width="96" height="96">
           <h3>Bolos</h3>
@@ -366,6 +366,20 @@
   <p>Usamos cookies para melhorar sua experiência no site. Ao continuar navegando, você concorda com isso.</p>
   <button type="button" class="btn btn-outline btn-sm" id="cookieAccept">Entendi</button>
 </div>
+
+<!-- Netlify Identity: redireciona convites de e-mail para o painel /admin -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', function (user) {
+      if (!user) {
+        window.netlifyIdentity.on('login', function () {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
 
 <script src="assets/js/script.js"></script>
 </body>
