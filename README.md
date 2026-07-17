@@ -40,9 +40,10 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 - **WhatsApp**: os links usam `https://wa.me/554136672764`. Se o número
   mudar, atualize em todas as ocorrências (botão flutuante, header, hero,
   seção de encomendas e rodapé).
-- **Preços**: os cards de produto não têm preço fixo (produtos variam por
-  encomenda). Se quiser adicionar preços "a partir de", edite os parágrafos
-  dentro de `.product-card` em `index.html`.
+- **Preços**: os valores "A partir de R$..." no cardápio são **ilustrativos**
+  (placeholder), marcados com "*" e um aviso de "sujeitos a confirmação".
+  Atualize com os preços reais em `.product-price` dentro de cada
+  `.product-card` em `index.html` assim que tiver os valores definidos.
 
 ## SEO local
 

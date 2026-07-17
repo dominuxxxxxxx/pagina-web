@@ -506,8 +506,16 @@ p { margin: 0 0 1em; }
 .product-card p {
   color: var(--color-text-light);
   font-size: .94rem;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   min-height: 3.2em;
+}
+
+.product-price {
+  display: block;
+  font-weight: 800;
+  color: var(--color-terracotta-dark);
+  font-size: .95rem;
+  margin-bottom: 16px;
 }
 
 .product-card .btn {
