@@ -145,6 +145,8 @@ p { margin: 0 0 1em; }
 
 .btn-lg { padding: 18px 36px; font-size: 1.05rem; }
 
+.btn-sm { padding: 10px 22px; font-size: .88rem; flex-shrink: 0; }
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -797,6 +799,49 @@ p { margin: 0 0 1em; }
     opacity: 1;
     margin-right: 2px;
   }
+}
+
+/* ---------- Cookie banner ---------- */
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: -120px;
+  z-index: 70;
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--color-brown);
+  color: rgba(255,255,255,0.92);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-strong);
+  transition: bottom .35s ease;
+}
+
+.cookie-banner.is-visible {
+  bottom: 20px;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: .88rem;
+  flex: 1 1 260px;
+  color: rgba(255,255,255,0.85);
+}
+
+.cookie-banner .btn-outline {
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+.cookie-banner .btn-outline:hover {
+  background: #fff;
+  color: var(--color-brown);
 }
 
 /* ---------- Utilities ---------- */
