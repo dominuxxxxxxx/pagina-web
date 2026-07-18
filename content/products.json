@@ -1,36 +1,12 @@
 {
   "items": [
     {
-      "id": "bolos",
+      "image": "assets/img/uploads/wallhaven-l83jjl_2560x1440.png",
+      "id": "Bolos ",
       "name": "Bolos",
       "description": "Bolos artesanais para aniversários, festas e encomendas especiais, com recheios tradicionais e cobertura caprichada.",
-      "price": "A partir de R$ 50*",
-      "image": "assets/img/icon-bolo.svg",
-      "whatsappText": "Olá, quero saber mais sobre os bolos!"
-    },
-    {
-      "id": "doces",
-      "name": "Doces",
-      "description": "Brigadeiros, docinhos de festa e guloseimas tradicionais, feitos com o mesmo capricho de sempre.",
-      "price": "A partir de R$ 35* (cento)",
-      "image": "assets/img/icon-doce.svg",
-      "whatsappText": "Olá, quero saber mais sobre os doces!"
-    },
-    {
-      "id": "salgados",
-      "name": "Salgados",
-      "description": "Salgados assados e fritos para festas, coffee break ou aquele lanche da tarde com a família.",
-      "price": "A partir de R$ 30* (cento)",
-      "image": "assets/img/icon-salgado.svg",
-      "whatsappText": "Olá, quero saber mais sobre os salgados!"
-    },
-    {
-      "id": "paves",
-      "name": "Pavês",
-      "description": "Pavês cremosos em camadas, a sobremesa queridinha da casa para fechar qualquer celebração com chave de ouro.",
-      "price": "A partir de R$ 25*",
-      "image": "assets/img/icon-pave.svg",
-      "whatsappText": "Olá, quero saber mais sobre os pavês!"
+      "price": "A partir de 50 Reais ",
+      "whatsappText": "Ola queria saber mais "
     }
   ]
 }
