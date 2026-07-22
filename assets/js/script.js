@@ -32,13 +32,16 @@ function imagemSrc(imagem) {
 }
 
 function produtoCardHtml(produto) {
+  const tagCategoria = produto.categoriaNome
+    ? `<span class="categoria-tag">${produto.categoriaNome}</span>`
+    : "";
   return `
-    <article class="produto-card" data-categoria="${produto.categoria}">
+    <article class="produto-card" data-categoria="${produto.categoria || ""}">
       <div class="foto">
         <img src="${imagemSrc(produto.imagem)}" alt="${produto.nome}" loading="lazy">
       </div>
       <div class="info">
-        <span class="categoria-tag">${produto.categoriaNome || ""}</span>
+        ${tagCategoria}
         <h3>${produto.nome}</h3>
         <p>${produto.descricao}</p>
         <a class="btn btn-whatsapp" target="_blank" rel="noopener"

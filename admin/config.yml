@@ -27,12 +27,14 @@ collections:
           - label: "Produtos"
             name: "produtos"
             widget: "list"
-            summary: "{{nome}} ({{categoria}})"
+            summary: "{{nome}}"
             fields:
               - { label: "ID (não altere se já existir)", name: "id", widget: "string" }
               - label: "Categoria"
                 name: "categoria"
                 widget: "select"
+                required: false
+                hint: "Deixe em branco se o produto não se encaixar em nenhuma categoria — ele aparece normalmente em \"Todos\", só não entra em nenhuma aba de filtro específica."
                 options:
                   - { label: "Áudio e Som", value: "audio" }
                   - { label: "Eletrônicos para Casa", value: "eletronicos" }

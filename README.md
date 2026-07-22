@@ -41,7 +41,15 @@ remotos, mochilas, cabos/carregadores) e do próprio letreiro da loja
 loja de informática especializada em computadores. Os produtos de
 `content/products.json` ainda são **genéricos/ilustrativos** (ex.: "Caixa de
 som Bluetooth portátil") porque não temos o catálogo real com marcas, modelos
-e preços. Antes de publicar:
+e preços.
+
+A loja também vende muita coisa avulsa que não vale a pena forçar em uma
+categoria (fita isolante, tesoura, abraçadeiras, etc. — vistos nas fotos da
+loja). Por isso o campo "Categoria" de cada produto no painel `/admin` é
+**opcional**: um produto sem categoria aparece normalmente em "Todos", só não
+entra em nenhuma aba de filtro específica.
+
+Antes de publicar:
 
 - Substitua os produtos de exemplo pelos produtos reais (nome, descrição e,
   se quiser, categoria) — pelo painel `/admin` ou direto no arquivo.
