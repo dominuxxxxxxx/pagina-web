@@ -45,7 +45,7 @@ collections:
                 name: "imagem"
                 widget: "image"
                 media_library: { config: { multiple: false } }
-                hint: "Envie uma foto real do produto. Até adicionar, mantenha produto-placeholder.svg."
+                hint: "Envie uma foto real do produto. Até adicionar, o cartão usa uma ilustração da categoria."
 
   - name: "depoimentos"
     label: "Depoimentos"

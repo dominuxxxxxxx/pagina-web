@@ -7,27 +7,27 @@
     { "id": "eletronicos", "nome": "Eletrônicos", "icone": "icon-eletronico.svg" }
   ],
   "produtos": [
-    { "id": "notebook-uso-profissional", "categoria": "computadores", "nome": "Notebook para uso profissional", "descricao": "Opções para trabalho e estudo, com bom desempenho no dia a dia.", "imagem": "produto-placeholder.svg" },
-    { "id": "notebook-gamer", "categoria": "computadores", "nome": "Notebook gamer", "descricao": "Configurações com placa de vídeo dedicada para jogos e edição.", "imagem": "produto-placeholder.svg" },
-    { "id": "computador-montado", "categoria": "computadores", "nome": "Computador montado sob medida", "descricao": "Montamos o computador ideal para o seu uso e orçamento.", "imagem": "produto-placeholder.svg" },
-    { "id": "monitor", "categoria": "computadores", "nome": "Monitor", "descricao": "Monitores para escritório, estudo e uso gamer.", "imagem": "produto-placeholder.svg" },
+    { "id": "notebook-uso-profissional", "categoria": "computadores", "nome": "Notebook para uso profissional", "descricao": "Opções para trabalho e estudo, com bom desempenho no dia a dia.", "imagem": "categoria-computadores.svg" },
+    { "id": "notebook-gamer", "categoria": "computadores", "nome": "Notebook gamer", "descricao": "Configurações com placa de vídeo dedicada para jogos e edição.", "imagem": "categoria-computadores.svg" },
+    { "id": "computador-montado", "categoria": "computadores", "nome": "Computador montado sob medida", "descricao": "Montamos o computador ideal para o seu uso e orçamento.", "imagem": "categoria-computadores.svg" },
+    { "id": "monitor", "categoria": "computadores", "nome": "Monitor", "descricao": "Monitores para escritório, estudo e uso gamer.", "imagem": "categoria-computadores.svg" },
 
-    { "id": "teclado-mouse", "categoria": "perifericos", "nome": "Kit teclado e mouse", "descricao": "Combos com e sem fio, para escritório ou uso gamer.", "imagem": "produto-placeholder.svg" },
-    { "id": "headset", "categoria": "perifericos", "nome": "Headset com microfone", "descricao": "Ideal para reuniões, aulas online e jogos.", "imagem": "produto-placeholder.svg" },
-    { "id": "webcam", "categoria": "perifericos", "nome": "Webcam", "descricao": "Para chamadas de vídeo com boa qualidade de imagem.", "imagem": "produto-placeholder.svg" },
-    { "id": "impressora", "categoria": "perifericos", "nome": "Impressora", "descricao": "Modelos para uso doméstico e de escritório.", "imagem": "produto-placeholder.svg" },
+    { "id": "teclado-mouse", "categoria": "perifericos", "nome": "Kit teclado e mouse", "descricao": "Combos com e sem fio, para escritório ou uso gamer.", "imagem": "categoria-perifericos.svg" },
+    { "id": "headset", "categoria": "perifericos", "nome": "Headset com microfone", "descricao": "Ideal para reuniões, aulas online e jogos.", "imagem": "categoria-perifericos.svg" },
+    { "id": "webcam", "categoria": "perifericos", "nome": "Webcam", "descricao": "Para chamadas de vídeo com boa qualidade de imagem.", "imagem": "categoria-perifericos.svg" },
+    { "id": "impressora", "categoria": "perifericos", "nome": "Impressora", "descricao": "Modelos para uso doméstico e de escritório.", "imagem": "categoria-perifericos.svg" },
 
-    { "id": "placa-mae", "categoria": "componentes", "nome": "Placa-mãe", "descricao": "Diversos soquetes e modelos para montagem e upgrade.", "imagem": "produto-placeholder.svg" },
-    { "id": "memoria-ram", "categoria": "componentes", "nome": "Memória RAM", "descricao": "Módulos para aumentar a velocidade do seu computador.", "imagem": "produto-placeholder.svg" },
-    { "id": "ssd-hd", "categoria": "componentes", "nome": "SSD e HD", "descricao": "Armazenamento com opções de capacidade para todo tipo de uso.", "imagem": "produto-placeholder.svg" },
-    { "id": "fonte-gabinete", "categoria": "componentes", "nome": "Fonte e gabinete", "descricao": "Peças para montagem completa do seu computador.", "imagem": "produto-placeholder.svg" },
+    { "id": "placa-mae", "categoria": "componentes", "nome": "Placa-mãe", "descricao": "Diversos soquetes e modelos para montagem e upgrade.", "imagem": "categoria-componentes.svg" },
+    { "id": "memoria-ram", "categoria": "componentes", "nome": "Memória RAM", "descricao": "Módulos para aumentar a velocidade do seu computador.", "imagem": "categoria-componentes.svg" },
+    { "id": "ssd-hd", "categoria": "componentes", "nome": "SSD e HD", "descricao": "Armazenamento com opções de capacidade para todo tipo de uso.", "imagem": "categoria-componentes.svg" },
+    { "id": "fonte-gabinete", "categoria": "componentes", "nome": "Fonte e gabinete", "descricao": "Peças para montagem completa do seu computador.", "imagem": "categoria-componentes.svg" },
 
-    { "id": "cabos-adaptadores", "categoria": "acessorios", "nome": "Cabos e adaptadores", "descricao": "HDMI, USB, rede e outros, para todo tipo de equipamento.", "imagem": "produto-placeholder.svg" },
-    { "id": "carregadores", "categoria": "acessorios", "nome": "Carregadores", "descricao": "Para notebook e celular, com opções originais e compatíveis.", "imagem": "produto-placeholder.svg" },
-    { "id": "pen-drive-cartao", "categoria": "acessorios", "nome": "Pen drive e cartão de memória", "descricao": "Diversas capacidades para guardar seus arquivos.", "imagem": "produto-placeholder.svg" },
+    { "id": "cabos-adaptadores", "categoria": "acessorios", "nome": "Cabos e adaptadores", "descricao": "HDMI, USB, rede e outros, para todo tipo de equipamento.", "imagem": "categoria-acessorios.svg" },
+    { "id": "carregadores", "categoria": "acessorios", "nome": "Carregadores", "descricao": "Para notebook e celular, com opções originais e compatíveis.", "imagem": "categoria-acessorios.svg" },
+    { "id": "pen-drive-cartao", "categoria": "acessorios", "nome": "Pen drive e cartão de memória", "descricao": "Diversas capacidades para guardar seus arquivos.", "imagem": "categoria-acessorios.svg" },
 
-    { "id": "caixa-som", "categoria": "eletronicos", "nome": "Caixa de som Bluetooth", "descricao": "Portáteis e para casa, com boa qualidade de som.", "imagem": "produto-placeholder.svg" },
-    { "id": "roteador", "categoria": "eletronicos", "nome": "Roteador Wi-Fi", "descricao": "Para melhorar a internet de casa ou do escritório.", "imagem": "produto-placeholder.svg" },
-    { "id": "estabilizador", "categoria": "eletronicos", "nome": "Estabilizador", "descricao": "Proteção para computadores e eletrônicos contra variação de energia.", "imagem": "produto-placeholder.svg" }
+    { "id": "caixa-som", "categoria": "eletronicos", "nome": "Caixa de som Bluetooth", "descricao": "Portáteis e para casa, com boa qualidade de som.", "imagem": "categoria-eletronicos.svg" },
+    { "id": "roteador", "categoria": "eletronicos", "nome": "Roteador Wi-Fi", "descricao": "Para melhorar a internet de casa ou do escritório.", "imagem": "categoria-eletronicos.svg" },
+    { "id": "estabilizador", "categoria": "eletronicos", "nome": "Estabilizador", "descricao": "Proteção para computadores e eletrônicos contra variação de energia.", "imagem": "categoria-eletronicos.svg" }
   ]
 }
