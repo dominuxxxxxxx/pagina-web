@@ -151,6 +151,56 @@ section {
   border-color: #fff;
 }
 
+.btn-instagram {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 122, 26, 0.35);
+  flex: none;
+}
+
+.btn-instagram:hover {
+  background: var(--accent-dark);
+}
+
+/* Instagram CTA */
+
+.instagram-cta {
+  background: var(--blue-light);
+  padding: 40px 0;
+}
+
+.instagram-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.instagram-cta-inner img {
+  flex: none;
+}
+
+.instagram-cta-inner h2 {
+  font-size: 1.2rem;
+  color: var(--navy);
+}
+
+.instagram-cta-inner p {
+  margin-top: 4px;
+  color: var(--gray-text);
+  font-size: 0.92rem;
+}
+
+@media (min-width: 768px) {
+  .instagram-cta-inner {
+    text-align: left;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
 /* Header */
 
 .site-header {
@@ -672,6 +722,29 @@ section {
   height: 320px;
   border: 0;
   display: block;
+}
+
+.rota-btn {
+  margin-top: 14px;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagamento-pills {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagamento-pills span {
+  background: #fff;
+  border: 1px solid var(--gray-border);
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
 }
 
 .info-list {

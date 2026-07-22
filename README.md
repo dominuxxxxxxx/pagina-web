@@ -99,6 +99,11 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
   cita a Moção de Louvor vista no Instagram da loja, sem citar o nome da
   pessoa homenageada — confirme com o cliente se querem destacar isso e como
   (ou remova, se preferirem não usar).
+- **Formas de pagamento**: a seção "Localização" lista Pix, cartão de
+  débito/crédito e dinheiro como suposição razoável para uma loja física —
+  confirme com o cliente e ajuste em `index.html` (seção `#localizacao`,
+  `.pagamento-pills`) se aceitarem outras formas (parcelamento, carteiras
+  digitais, etc.).
 - **Domínio**: as tags `canonical` e Open Graph em `index.html`, além de
   `robots.txt` e `sitemap.xml`, usam `https://jpginformatica.com.br/` como
   placeholder — atualize para o domínio real depois da compra/configuração.
