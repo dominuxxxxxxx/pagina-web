@@ -2,42 +2,44 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "assets/img/uploads"
-public_folder: "assets/img/uploads"
+media_folder: assets/img/uploads
+public_folder: /assets/img/uploads
 
 locale: "pt"
 
 collections:
-  - name: "products"
-    label: "Cardápio"
+  - name: "produtos"
+    label: "Produtos (Categorias)"
     files:
-      - file: "content/products.json"
-        label: "Produtos"
-        name: "products"
-        format: "json"
+      - name: "categorias"
+        label: "Categorias de produtos"
+        file: "content/products.json"
         fields:
-          - label: "Produtos"
-            name: "items"
+          - label: "Categorias"
+            name: "categorias"
             widget: "list"
-            summary: "{{name}} — {{price}}"
+            summary: "{{nome}}"
             fields:
-              - label: "Identificador (não altere)"
-                name: "id"
-                widget: "string"
-              - label: "Nome"
-                name: "name"
-                widget: "string"
-              - label: "Descrição"
-                name: "description"
-                widget: "text"
-              - label: "Preço"
-                name: "price"
-                widget: "string"
-                hint: "Ex: A partir de R$ 45*"
-              - label: "Foto"
-                name: "image"
-                widget: "image"
-              - label: "Mensagem padrão do WhatsApp"
-                name: "whatsappText"
-                widget: "string"
-                required: false
+              - { label: "ID (não altere se já existir)", name: "id", widget: "string" }
+              - { label: "Nome da categoria", name: "nome", widget: "string" }
+              - { label: "Descrição", name: "descricao", widget: "text" }
+              - { label: "Ícone (arquivo em assets/img/)", name: "icone", widget: "string" }
+              - label: "Itens em destaque"
+                name: "itens"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }
+
+  - name: "depoimentos"
+    label: "Depoimentos"
+    files:
+      - name: "depoimentos"
+        label: "Depoimentos de clientes"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Depoimentos"
+            name: "depoimentos"
+            widget: "list"
+            summary: "{{autor}}"
+            fields:
+              - { label: "Texto do depoimento", name: "texto", widget: "text" }
+              - { label: "Nome do cliente", name: "autor", widget: "string" }

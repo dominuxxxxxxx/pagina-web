@@ -1,99 +1,106 @@
-// Confeitaria Bom Gosto — interações da página
+// JPG Informática — interações do site
 
-// Substitua pelo Measurement ID real do Google Analytics 4 quando disponível
-// (Google Analytics > Administrador > Fluxos de dados > Web). Enquanto o ID
-// permanecer com "XXXX", nenhum script de analytics é carregado.
-var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
-var COOKIE_CONSENT_KEY = 'bg_cookie_consent';
+// Troque pelo Measurement ID real (formato G-XXXXXXXXXX) para ativar o Google Analytics 4.
+const GA_MEASUREMENT_ID = "";
 
-function loadAnalytics() {
-  if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXXX') !== -1) return;
+const WHATSAPP_NUMBER = "5541996156001";
 
-  var script = document.createElement('script');
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+// Menu mobile
+const header = document.getElementById("site-header");
+const navToggle = document.getElementById("nav-toggle");
+navToggle.addEventListener("click", () => {
+  const isOpen = header.classList.toggle("menu-open");
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+});
+document.getElementById("mobile-menu").addEventListener("click", (e) => {
+  if (e.target.tagName === "A") {
+    header.classList.remove("menu-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+// Categorias de produtos (content/products.json)
+fetch("content/products.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const categorias = data.categorias || [];
+    const grid = document.getElementById("categorias-grid");
+    grid.innerHTML = categorias
+      .map((cat) => {
+        const itens = (cat.itens || []).map((item) => `<span>${item}</span>`).join("");
+        const mensagem = encodeURIComponent(
+          `Olá! Gostaria de saber mais sobre ${cat.nome}.`
+        );
+        return `
+          <article class="categoria-card">
+            <img src="assets/img/${cat.icone}" alt="" width="52" height="52">
+            <h3>${cat.nome}</h3>
+            <p>${cat.descricao}</p>
+            <div class="categoria-itens">${itens}</div>
+            <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+               href="https://wa.me/${WHATSAPP_NUMBER}?text=${mensagem}">
+              Perguntar no WhatsApp
+            </a>
+          </article>`;
+      })
+      .join("");
+  })
+  .catch(() => {
+    document.getElementById("categorias-grid").innerHTML =
+      "<p>Não foi possível carregar os produtos no momento. Fale com a gente pelo WhatsApp.</p>";
+  });
+
+// Depoimentos (content/testimonials.json)
+fetch("content/testimonials.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const depoimentos = data.depoimentos || [];
+    const grid = document.getElementById("depoimentos-grid");
+    grid.innerHTML = depoimentos
+      .map(
+        (dep) => `
+          <div class="depoimento-card">
+            <div class="quote-mark">&ldquo;</div>
+            <p class="texto">${dep.texto}</p>
+            <div class="autor">${dep.autor}</div>
+          </div>`
+      )
+      .join("");
+  })
+  .catch(() => {
+    document.getElementById("depoimentos-grid").innerHTML = "";
+  });
+
+// Aviso de cookies (LGPD) + Google Analytics 4
+const cookieBanner = document.getElementById("cookie-banner");
+const cookieAccept = document.getElementById("cookie-accept");
+const COOKIE_KEY = "jpg-informatica-cookies-aceitos";
+
+function carregarAnalytics() {
+  if (!GA_MEASUREMENT_ID) return;
+  const script = document.createElement("script");
   script.async = true;
-  script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
   document.head.appendChild(script);
 
   window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', GA_MEASUREMENT_ID);
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", GA_MEASUREMENT_ID);
 }
 
-// Recria os cards do cardápio a partir de content/products.json, editável
-// pelo painel /admin. Se o arquivo não carregar (offline, JS desativado),
-// os cards estáticos já presentes no HTML permanecem como estão.
-function renderProducts(items) {
-  var grid = document.getElementById('productGrid');
-  if (!grid || !Array.isArray(items) || !items.length) return;
-
-  grid.innerHTML = '';
-
-  items.forEach(function (item) {
-    var card = document.createElement('article');
-    card.className = 'product-card';
-
-    var img = document.createElement('img');
-    img.src = item.image || 'assets/img/icon-bolo.svg';
-    img.alt = item.name ? item.name + ' artesanais' : '';
-    img.width = 96;
-    img.height = 96;
-    card.appendChild(img);
-
-    var h3 = document.createElement('h3');
-    h3.textContent = item.name || '';
-    card.appendChild(h3);
-
-    var desc = document.createElement('p');
-    desc.textContent = item.description || '';
-    card.appendChild(desc);
-
-    if (item.price) {
-      var price = document.createElement('span');
-      price.className = 'product-price';
-      price.textContent = item.price;
-      card.appendChild(price);
-    }
-
-    var link = document.createElement('a');
-    link.className = 'btn btn-whatsapp';
-    link.target = '_blank';
-    link.rel = 'noopener';
-    var message = item.whatsappText || ('Olá, quero saber mais sobre ' + (item.name || 'os produtos') + '!');
-    link.href = 'https://wa.me/554136672764?text=' + encodeURIComponent(message);
-    link.textContent = 'Peça pelo WhatsApp';
-    card.appendChild(link);
-
-    grid.appendChild(card);
-  });
+if (localStorage.getItem(COOKIE_KEY) === "true") {
+  carregarAnalytics();
+} else {
+  cookieBanner.classList.add("show");
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
-
-  fetch('content/products.json', { cache: 'no-store' })
-    .then(function (res) { return res.ok ? res.json() : null; })
-    .then(function (data) {
-      if (data && data.items) renderProducts(data.items);
-    })
-    .catch(function () { /* mantém os cards estáticos do HTML */ });
-
-  var banner = document.getElementById('cookieBanner');
-  var acceptBtn = document.getElementById('cookieAccept');
-  if (!banner || !acceptBtn) return;
-
-  if (localStorage.getItem(COOKIE_CONSENT_KEY) === 'accepted') {
-    loadAnalytics();
-  } else {
-    banner.classList.add('is-visible');
-  }
-
-  acceptBtn.addEventListener('click', function () {
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
-    banner.classList.remove('is-visible');
-    loadAnalytics();
-  });
+cookieAccept.addEventListener("click", () => {
+  localStorage.setItem(COOKIE_KEY, "true");
+  cookieBanner.classList.remove("show");
+  carregarAnalytics();
 });

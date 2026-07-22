@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t3">
-<title id="t3">Salgados artesanais</title>
-<circle cx="60" cy="60" r="58" fill="#F7E6D7"/>
-<path d="M32 78c0-18 12-34 28-34s28 16 28 34" fill="#E3A06E"/>
-<path d="M32 78c0-18 12-34 28-34s28 16 28 34" fill="none" stroke="#B5633A" stroke-width="3"/>
-<path d="M40 78c0-14 9-27 20-27s20 13 20 27" fill="#F0BE8D"/>
-<ellipse cx="60" cy="80" rx="30" ry="6" fill="#C9784F"/>
-<path d="M46 60c2-3 6-3 8 0M56 55c2-3 6-3 8 0M66 60c2-3 6-3 8 0" stroke="#8C4A2B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-</svg>

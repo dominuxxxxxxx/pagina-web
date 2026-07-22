@@ -1,36 +1,39 @@
 {
-  "items": [
+  "categorias": [
     {
-      "id": "bolos",
-      "name": "Bolos",
-      "description": "Bolos artesanais para aniversários, festas e encomendas especiais, com recheios tradicionais e cobertura caprichada.",
-      "price": "A partir de R$ 50*",
-      "image": "assets/img/icon-bolo.svg",
-      "whatsappText": "Olá, quero saber mais sobre os bolos!"
+      "id": "computadores",
+      "nome": "Computadores e Notebooks",
+      "descricao": "Desktops montados, notebooks novos e seminovos, com opções para todos os orçamentos e usos.",
+      "icone": "icon-computador.svg",
+      "itens": ["Notebooks", "Computadores montados", "Monitores", "Upgrades de memória e SSD"]
     },
     {
-      "id": "doces",
-      "name": "Doces",
-      "description": "Brigadeiros, docinhos de festa e guloseimas tradicionais, feitos com o mesmo capricho de sempre.",
-      "price": "A partir de R$ 35* (cento)",
-      "image": "assets/img/icon-doce.svg",
-      "whatsappText": "Olá, quero saber mais sobre os doces!"
+      "id": "perifericos",
+      "nome": "Periféricos",
+      "descricao": "Tudo para deixar seu setup completo, de escritório a gamer.",
+      "icone": "icon-periferico.svg",
+      "itens": ["Teclados e mouses", "Headsets e fones", "Webcams", "Impressoras"]
     },
     {
-      "id": "salgados",
-      "name": "Salgados",
-      "description": "Salgados assados e fritos para festas, coffee break ou aquele lanche da tarde com a família.",
-      "price": "A partir de R$ 30* (cento)",
-      "image": "assets/img/icon-salgado.svg",
-      "whatsappText": "Olá, quero saber mais sobre os salgados!"
+      "id": "componentes",
+      "nome": "Componentes e Peças",
+      "descricao": "Peças para montagem e upgrade de computadores, com marcas confiáveis.",
+      "icone": "icon-componente.svg",
+      "itens": ["Placas-mãe", "Processadores", "Memórias RAM", "HDs e SSDs", "Fontes e gabinetes"]
     },
     {
-      "id": "paves",
-      "name": "Pavês",
-      "description": "Pavês cremosos em camadas, a sobremesa queridinha da casa para fechar qualquer celebração com chave de ouro.",
-      "price": "A partir de R$ 25*",
-      "image": "assets/img/icon-pave.svg",
-      "whatsappText": "Olá, quero saber mais sobre os pavês!"
+      "id": "acessorios",
+      "nome": "Acessórios",
+      "descricao": "Cabos, adaptadores, carregadores e acessórios para computadores e celulares.",
+      "icone": "icon-acessorio.svg",
+      "itens": ["Cabos e adaptadores", "Carregadores", "Pen drives e cartões", "Suportes e organizadores"]
+    },
+    {
+      "id": "eletronicos",
+      "nome": "Eletrônicos",
+      "descricao": "Linha de eletrônicos em geral para casa e trabalho.",
+      "icone": "icon-eletronico.svg",
+      "itens": ["Caixas de som", "Roteadores e redes", "Estabilizadores", "Eletrônicos diversos"]
     }
   ]
 }

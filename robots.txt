@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 
-Sitemap: https://confeitariabomgosto.com.br/sitemap.xml
+Sitemap: https://jpginformatica.com.br/sitemap.xml
