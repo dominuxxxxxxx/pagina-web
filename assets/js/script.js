@@ -21,6 +21,41 @@ document.getElementById("mobile-menu").addEventListener("click", (e) => {
   }
 });
 
+// Destaca o link de navegação da seção visível (scroll-spy)
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]');
+const secoes = Array.from(navAnchors)
+  .map((a) => document.getElementById(a.getAttribute("href").slice(1)))
+  .filter(Boolean);
+
+if (secoes.length) {
+  let ticking = false;
+  function atualizarNavAtivo() {
+    const noFinalDaPagina =
+      window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+    const referencia = window.scrollY + header.offsetHeight + 40;
+    let atual = secoes[0];
+    for (const secao of secoes) {
+      if (secao.offsetTop <= referencia) atual = secao;
+    }
+    if (noFinalDaPagina) atual = secoes[secoes.length - 1];
+    navAnchors.forEach((a) => {
+      a.classList.toggle("active", a.getAttribute("href") === `#${atual.id}`);
+    });
+    ticking = false;
+  }
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(atualizarNavAtivo);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+  atualizarNavAtivo();
+}
+
 // Categorias de produtos (content/products.json)
 function whatsappLink(mensagem) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;

@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JPG Informática — Eletrônicos, Acessórios e Variedades em Pinhais/PR</title>
-<meta name="description" content="JPG Informática: eletrônicos, acessórios para celular, áudio e variedades em Pinhais - PR, com entrega no bairro. 10 anos de confiança, avaliado com 4,8★ no Google. Fale agora no WhatsApp.">
+<meta name="description" content="Eletrônicos, acessórios para celular, áudio e variedades em Pinhais - PR. 10 anos de confiança, 4,8★ no Google, com entrega no bairro. Fale no WhatsApp.">
 <meta name="keywords" content="eletrônicos Pinhais, acessórios para celular Pinhais, caixa de som Pinhais, loja de variedades Pinhais, informática Pinhais, entrega Pinhais">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f2540">
 <link rel="canonical" href="https://jpginformatica.com.br/">
 
 <!-- Open Graph -->
@@ -16,6 +17,12 @@
 <meta property="og:url" content="https://jpginformatica.com.br/">
 <meta property="og:image" content="https://jpginformatica.com.br/assets/img/logo.svg">
 <meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JPG Informática — Eletrônicos, Acessórios e Variedades em Pinhais/PR">
+<meta name="twitter:description" content="Eletrônicos, acessórios para celular, áudio e variedades em Pinhais - PR, com entrega no bairro. Avaliação 4,8★ no Google.">
+<meta name="twitter:image" content="https://jpginformatica.com.br/assets/img/logo.svg">
 
 <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -62,7 +69,59 @@
     "reviewCount": "181"
   },
   "award": "Moção de Louvor da Câmara Municipal de Pinhais",
+  "areaServed": "Pinhais, PR",
+  "paymentAccepted": "Pix, Cartão de débito, Cartão de crédito, Dinheiro",
   "sameAs": ["https://instagram.com/informaticajpg"]
+}
+</script>
+
+<!-- Dados estruturados (FAQ) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como faço um pedido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Veja o produto no catálogo do site ou pergunte direto pelo WhatsApp. A gente confirma disponibilidade, preço e combina retirada na loja ou entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Por que o site não mostra preços?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O estoque muda com frequência, então os preços são confirmados na hora pelo WhatsApp para garantir que a informação esteja sempre certa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais formas de pagamento vocês aceitam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pix, cartão de débito, cartão de crédito e dinheiro. Em pedidos com entrega, dá para pagar por Pix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês fazem entrega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, fazemos entrega no bairro. Fale pelo WhatsApp para confirmar se atendemos sua região, o prazo e as condições."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso trocar ou devolver um produto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compras combinadas fora da loja (por WhatsApp, com entrega) têm 7 dias de direito de arrependimento, conforme o Código de Defesa do Consumidor. Produtos com defeito têm garantia do fabricante."
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -97,6 +156,7 @@
     <a href="#produtos">Produtos</a>
     <a href="#servicos">Diferenciais</a>
     <a href="#depoimentos">Depoimentos</a>
+    <a href="#faq">Dúvidas</a>
     <a href="#localizacao">Localização</a>
     <a href="#contato">Contato</a>
     <a class="btn btn-whatsapp" target="_blank" rel="noopener"
@@ -203,6 +263,10 @@
       </div>
       <div class="produtos-grid" id="produtos-grid">
         <!-- Preenchido via JS a partir de content/products.json -->
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
       </div>
       <p class="produtos-footnote">Não encontrou o que procura? Fale com a gente pelo WhatsApp
         que a gente te ajuda a encontrar.</p>
@@ -272,6 +336,9 @@
       </div>
       <div class="depoimentos-grid" id="depoimentos-grid">
         <!-- Preenchido via JS a partir de content/testimonials.json -->
+        <div class="skeleton-card skeleton-depoimento" aria-hidden="true"></div>
+        <div class="skeleton-card skeleton-depoimento" aria-hidden="true"></div>
+        <div class="skeleton-card skeleton-depoimento" aria-hidden="true"></div>
       </div>
       <div class="depoimentos-cta">
         <a class="btn btn-outline" target="_blank" rel="noopener"
@@ -400,8 +467,12 @@
         </div>
         <p>Informática e eletrônicos em Pinhais com quem você confia.</p>
         <div class="social-links">
-          <a href="https://instagram.com/informaticajpg" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-          <a href="https://wa.me/5541996156001" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://instagram.com/informaticajpg" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="assets/img/icon-instagram.svg" alt="" width="20" height="20">
+          </a>
+          <a href="https://wa.me/5541996156001" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <img src="assets/img/icon-whatsapp.svg" alt="" width="20" height="20">
+          </a>
         </div>
       </div>
       <div class="footer-col">
