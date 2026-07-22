@@ -10,17 +10,40 @@ index.html                 Página única (hero, sobre nós, produtos, serviços
                             depoimentos, localização, contato)
 assets/css/style.css       Estilos (paleta azul-marinho/cinza com acento
                             laranja, responsivo)
-assets/js/script.js        Interações + carrega categorias e depoimentos dos
-                            arquivos JSON em content/
-assets/img/                Ícones SVG das categorias, logo e ícone do WhatsApp
-assets/img/uploads/        Imagens enviadas pelo painel /admin
-content/products.json      Categorias de produtos (nome, descrição, itens em
-                            destaque, ícone) — editável via /admin ou direto
-                            no arquivo
+assets/js/script.js        Interações + carrega o catálogo e os depoimentos
+                            dos arquivos JSON em content/
+assets/img/                Ícones SVG das categorias, logo, ícone do WhatsApp
+                            e a imagem produto-placeholder.svg
+assets/img/uploads/        Fotos de produtos enviadas pelo painel /admin
+content/products.json      Catálogo: categorias (abas de filtro) e produtos
+                            individuais (nome, descrição curta, foto,
+                            categoria) — editável via /admin ou direto no
+                            arquivo
 content/testimonials.json  Depoimentos de clientes — editável via /admin ou
                             direto no arquivo
 admin/                     Painel de edição (Decap CMS)
 ```
+
+## Catálogo de produtos
+
+A seção "Produtos" mostra um catálogo filtrável: abas por categoria (Todos,
+Computadores e Notebooks, Periféricos, Componentes e Peças, Acessórios,
+Eletrônicos) e um grid de cartões — um por produto, com foto, nome, descrição
+curta e um botão de WhatsApp que já vem com a mensagem preenchida citando o
+produto.
+
+Os produtos de `content/products.json` hoje são **genéricos/ilustrativos**
+(ex.: "Notebook para uso profissional", "Kit teclado e mouse") porque ainda
+não temos o catálogo real com marcas, modelos e fotos da loja. Antes de
+publicar:
+
+- Substitua os produtos de exemplo pelos produtos reais (nome, descrição e,
+  se quiser, categoria) — pelo painel `/admin` ou direto no arquivo.
+- Envie fotos reais de cada produto pelo painel `/admin` (campo "Foto do
+  produto"). Até lá, os cartões usam `assets/img/produto-placeholder.svg`.
+- Para adicionar/remover categorias, edite a lista `categorias` em
+  `content/products.json` **e** as opções do campo "Categoria" em
+  `admin/config.yml` (são mantidas em sincronia manualmente).
 
 ## Rodar localmente
 
@@ -49,18 +72,17 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
   placeholder pedindo para serem substituídos. Troque por depoimentos reais
   copiados das avaliações do Google (com autorização do cliente que avaliou)
   — pelo painel `/admin` ou direto no arquivo.
-- **Fotos reais da loja e dos produtos**: hoje as categorias usam ícones SVG
-  de placeholder. Adicione fotos reais da fachada, do interior e de produtos
-  em destaque em `assets/img/` e atualize as tags `<img>` correspondentes
-  para melhorar a conversão.
+- **Fotos reais dos produtos**: veja a seção "Catálogo de produtos" acima —
+  os cartões hoje usam uma imagem de placeholder até que fotos reais sejam
+  enviadas pelo painel `/admin`.
 - **Serviços oferecidos**: a seção "Serviços" lista montagem, manutenção,
   instalação de periféricos e assistência técnica como um ponto de partida
   comum para lojas do ramo — confirme com o cliente quais serviços
   realmente são oferecidos e ajuste/remova cards em `index.html` (seção
   `#servicos`).
-- **Categorias e itens de produto**: os itens em destaque de cada categoria
-  em `content/products.json` são exemplos — ajuste para refletir o estoque
-  real da loja.
+- **Produtos do catálogo**: os produtos em `content/products.json` são
+  exemplos genéricos — ajuste nomes, descrições e categorias para refletir o
+  estoque real da loja (veja "Catálogo de produtos" acima).
 - **Anos de trajetória**: o texto da seção "Sobre nós" evita citar um número
   específico de anos. Se o cliente quiser destacar isso, adicione a
   informação em `index.html` (seção `#sobre`).

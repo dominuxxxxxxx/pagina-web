@@ -22,33 +22,73 @@ document.getElementById("mobile-menu").addEventListener("click", (e) => {
 });
 
 // Categorias de produtos (content/products.json)
+function whatsappLink(mensagem) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+}
+
+function imagemSrc(imagem) {
+  if (!imagem) return "assets/img/produto-placeholder.svg";
+  return imagem.startsWith("/") || imagem.startsWith("http") ? imagem : `assets/img/${imagem}`;
+}
+
+function produtoCardHtml(produto) {
+  return `
+    <article class="produto-card" data-categoria="${produto.categoria}">
+      <div class="foto">
+        <img src="${imagemSrc(produto.imagem)}" alt="${produto.nome}" loading="lazy">
+      </div>
+      <div class="info">
+        <span class="categoria-tag">${produto.categoriaNome || ""}</span>
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+           href="${whatsappLink(`Olá! Tenho interesse em: ${produto.nome}.`)}">
+          Perguntar no WhatsApp
+        </a>
+      </div>
+    </article>`;
+}
+
 fetch("content/products.json")
   .then((res) => res.json())
   .then((data) => {
     const categorias = data.categorias || [];
-    const grid = document.getElementById("categorias-grid");
-    grid.innerHTML = categorias
-      .map((cat) => {
-        const itens = (cat.itens || []).map((item) => `<span>${item}</span>`).join("");
-        const mensagem = encodeURIComponent(
-          `Olá! Gostaria de saber mais sobre ${cat.nome}.`
-        );
-        return `
-          <article class="categoria-card">
-            <img src="assets/img/${cat.icone}" alt="" width="52" height="52">
-            <h3>${cat.nome}</h3>
-            <p>${cat.descricao}</p>
-            <div class="categoria-itens">${itens}</div>
-            <a class="btn btn-whatsapp" target="_blank" rel="noopener"
-               href="https://wa.me/${WHATSAPP_NUMBER}?text=${mensagem}">
-              Perguntar no WhatsApp
-            </a>
-          </article>`;
-      })
-      .join("");
+    const produtos = (data.produtos || []).map((p) => ({
+      ...p,
+      categoriaNome: (categorias.find((c) => c.id === p.categoria) || {}).nome || "",
+    }));
+
+    const filtros = document.getElementById("filtros-categoria");
+    const grid = document.getElementById("produtos-grid");
+
+    filtros.innerHTML =
+      `<button class="filtro-btn active" data-categoria="todos">Todos</button>` +
+      categorias
+        .map(
+          (cat) => `
+            <button class="filtro-btn" data-categoria="${cat.id}">
+              <img src="assets/img/${cat.icone}" alt="">
+              ${cat.nome}
+            </button>`
+        )
+        .join("");
+
+    grid.innerHTML = produtos.map(produtoCardHtml).join("");
+
+    filtros.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filtro-btn");
+      if (!btn) return;
+      filtros.querySelectorAll(".filtro-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const categoria = btn.dataset.categoria;
+      grid.querySelectorAll(".produto-card").forEach((card) => {
+        const mostrar = categoria === "todos" || card.dataset.categoria === categoria;
+        card.style.display = mostrar ? "" : "none";
+      });
+    });
   })
   .catch(() => {
-    document.getElementById("categorias-grid").innerHTML =
+    document.getElementById("produtos-grid").innerHTML =
       "<p>Não foi possível carregar os produtos no momento. Fale com a gente pelo WhatsApp.</p>";
   });
 

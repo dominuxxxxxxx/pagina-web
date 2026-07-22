@@ -8,26 +8,44 @@ public_folder: /assets/img/uploads
 locale: "pt"
 
 collections:
-  - name: "produtos"
-    label: "Produtos (Categorias)"
+  - name: "catalogo"
+    label: "Catálogo"
     files:
-      - name: "categorias"
-        label: "Categorias de produtos"
+      - name: "produtos"
+        label: "Categorias e produtos"
         file: "content/products.json"
         fields:
-          - label: "Categorias"
+          - label: "Categorias (abas de filtro)"
             name: "categorias"
             widget: "list"
             summary: "{{nome}}"
             fields:
               - { label: "ID (não altere se já existir)", name: "id", widget: "string" }
               - { label: "Nome da categoria", name: "nome", widget: "string" }
-              - { label: "Descrição", name: "descricao", widget: "text" }
               - { label: "Ícone (arquivo em assets/img/)", name: "icone", widget: "string" }
-              - label: "Itens em destaque"
-                name: "itens"
-                widget: "list"
-                field: { label: "Item", name: "item", widget: "string" }
+
+          - label: "Produtos"
+            name: "produtos"
+            widget: "list"
+            summary: "{{nome}} ({{categoria}})"
+            fields:
+              - { label: "ID (não altere se já existir)", name: "id", widget: "string" }
+              - label: "Categoria"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - { label: "Computadores e Notebooks", value: "computadores" }
+                  - { label: "Periféricos", value: "perifericos" }
+                  - { label: "Componentes e Peças", value: "componentes" }
+                  - { label: "Acessórios", value: "acessorios" }
+                  - { label: "Eletrônicos", value: "eletronicos" }
+              - { label: "Nome do produto", name: "nome", widget: "string" }
+              - { label: "Descrição curta", name: "descricao", widget: "text" }
+              - label: "Foto do produto"
+                name: "imagem"
+                widget: "image"
+                media_library: { config: { multiple: false } }
+                hint: "Envie uma foto real do produto. Até adicionar, mantenha produto-placeholder.svg."
 
   - name: "depoimentos"
     label: "Depoimentos"
