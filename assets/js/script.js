@@ -116,6 +116,24 @@ fetch("content/testimonials.json")
     document.getElementById("depoimentos-grid").innerHTML = "";
   });
 
+// Copiar chave Pix
+const pixCopiarBtn = document.getElementById("pix-copiar");
+if (pixCopiarBtn) {
+  pixCopiarBtn.addEventListener("click", async () => {
+    const chave = document.getElementById("pix-chave").textContent.trim();
+    try {
+      await navigator.clipboard.writeText(chave);
+      const textoOriginal = pixCopiarBtn.textContent;
+      pixCopiarBtn.textContent = "Copiado!";
+      setTimeout(() => {
+        pixCopiarBtn.textContent = textoOriginal;
+      }, 2000);
+    } catch (e) {
+      window.prompt("Copie a chave Pix:", chave);
+    }
+  });
+}
+
 // Aviso de cookies (LGPD) + Google Analytics 4
 const cookieBanner = document.getElementById("cookie-banner");
 const cookieAccept = document.getElementById("cookie-accept");

@@ -104,6 +104,17 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
   confirme com o cliente e ajuste em `index.html` (seção `#localizacao`,
   `.pagamento-pills`) se aceitarem outras formas (parcelamento, carteiras
   digitais, etc.).
+- **⚠️ Chave Pix (obrigatório antes de publicar)**: para quem pede entrega
+  poder pagar direto pelo site, a seção "Localização" mostra uma chave Pix
+  com botão "Copiar chave" — hoje com o valor de exemplo
+  `SUBSTITUIR-PELA-CHAVE-PIX-REAL` propositalmente quebrado para não ser
+  publicado por engano. Troque pelo `id="pix-chave"` em `index.html` pela
+  chave Pix real da loja (CPF/CNPJ, e-mail, telefone ou chave aleatória)
+  antes de publicar. Não há checkout automático nem QR code gerado — é um
+  fluxo manual (cliente pede pelo WhatsApp, combina a entrega, paga por Pix
+  e manda o comprovante na conversa). Um checkout de verdade (Mercado Pago/
+  PagSeguro, com preços fixos por produto e um backend para gerar a cobrança
+  com segurança) é um projeto à parte, bem maior que esta landing page.
 - **Domínio**: as tags `canonical` e Open Graph em `index.html`, além de
   `robots.txt` e `sitemap.xml`, usam `https://jpginformatica.com.br/` como
   placeholder — atualize para o domínio real depois da compra/configuração.
