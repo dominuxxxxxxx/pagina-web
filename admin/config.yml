@@ -34,11 +34,11 @@ collections:
                 name: "categoria"
                 widget: "select"
                 options:
-                  - { label: "Computadores e Notebooks", value: "computadores" }
-                  - { label: "Periféricos", value: "perifericos" }
-                  - { label: "Componentes e Peças", value: "componentes" }
-                  - { label: "Acessórios", value: "acessorios" }
-                  - { label: "Eletrônicos", value: "eletronicos" }
+                  - { label: "Áudio e Som", value: "audio" }
+                  - { label: "Eletrônicos para Casa", value: "eletronicos" }
+                  - { label: "Acessórios para Celular e Carro", value: "acessorios-celular" }
+                  - { label: "Bolsas e Mochilas", value: "mochilas" }
+                  - { label: "Informática", value: "informatica" }
               - { label: "Nome do produto", name: "nome", widget: "string" }
               - { label: "Descrição curta", name: "descricao", widget: "text" }
               - label: "Foto do produto"

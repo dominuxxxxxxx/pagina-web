@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <rect width="400" height="300" fill="#E8F1FB"/>
+  <ellipse cx="200" cy="248" rx="150" ry="14" fill="#D3E3F5"/>
+
+  <!-- Caixa de som portátil -->
+  <g transform="translate(140,60)">
+    <rect x="0" y="0" width="70" height="150" rx="16" fill="#0F2540"/>
+    <circle cx="35" cy="36" r="22" fill="#145DA0"/>
+    <circle cx="35" cy="36" r="10" fill="#8FC1FF"/>
+    <circle cx="35" cy="104" r="28" fill="#145DA0"/>
+    <circle cx="35" cy="104" r="13" fill="#8FC1FF"/>
+    <circle cx="60" cy="14" r="4" fill="#FF7A1A"/>
+  </g>
+
+  <!-- Ondas de som -->
+  <path d="M230 110q16 34 0 68" fill="none" stroke="#FF7A1A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M248 96q26 48 0 96" fill="none" stroke="#FF7A1A" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Mini rádio -->
+  <g transform="translate(270,140)">
+    <rect x="0" y="0" width="70" height="46" rx="6" fill="#145DA0"/>
+    <circle cx="18" cy="23" r="12" fill="#0F2540"/>
+    <circle cx="18" cy="23" r="5" fill="#8FC1FF"/>
+    <rect x="38" y="14" width="24" height="18" rx="2" fill="#8FC1FF"/>
+    <path d="M50 0v-16" stroke="#0F2540" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

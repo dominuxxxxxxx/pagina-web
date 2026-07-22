@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <rect width="400" height="300" fill="#E8F1FB"/>
+  <ellipse cx="200" cy="248" rx="150" ry="14" fill="#D3E3F5"/>
+
+  <!-- Suporte veicular -->
+  <g transform="translate(70,90)">
+    <rect x="0" y="90" width="16" height="40" rx="4" fill="#0F2540"/>
+    <path d="M8 90v-30" stroke="#0F2540" stroke-width="8" stroke-linecap="round"/>
+    <rect x="-16" y="0" width="48" height="66" rx="10" fill="#145DA0"/>
+    <rect x="-8" y="10" width="32" height="46" rx="4" fill="#8FC1FF"/>
+  </g>
+
+  <!-- Celular com capa -->
+  <g transform="translate(180,60)">
+    <rect x="0" y="0" width="70" height="130" rx="14" fill="#0F2540"/>
+    <rect x="8" y="12" width="54" height="98" rx="4" fill="#145DA0"/>
+    <circle cx="35" cy="118" r="4" fill="#8FC1FF"/>
+  </g>
+
+  <!-- Controle remoto -->
+  <g transform="translate(290,90)">
+    <rect x="0" y="0" width="24" height="70" rx="7" fill="#0F2540"/>
+    <circle cx="12" cy="14" r="5" fill="#FF7A1A"/>
+    <rect x="5" y="26" width="14" height="8" rx="2" fill="#8FC1FF"/>
+    <rect x="5" y="40" width="14" height="8" rx="2" fill="#8FC1FF"/>
+  </g>
+</svg>

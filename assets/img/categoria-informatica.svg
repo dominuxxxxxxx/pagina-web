@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-hidden="true">
+  <rect width="400" height="300" fill="#E8F1FB"/>
+  <ellipse cx="200" cy="248" rx="150" ry="14" fill="#D3E3F5"/>
+
+  <!-- Cabo enrolado -->
+  <path d="M80 200c0-60 50-90 100-90s100 30 100 90" fill="none" stroke="#145DA0" stroke-width="10" stroke-linecap="round"/>
+  <rect x="66" y="190" width="28" height="20" rx="4" fill="#0F2540"/>
+  <rect x="326" y="190" width="28" height="20" rx="4" fill="#0F2540"/>
+
+  <!-- Pen drive -->
+  <g transform="translate(170,90)">
+    <rect x="0" y="10" width="60" height="30" rx="6" fill="#FF7A1A"/>
+    <rect x="-18" y="18" width="20" height="14" rx="3" fill="#0F2540"/>
+  </g>
+
+  <!-- Carregador -->
+  <g transform="translate(260,60)">
+    <rect x="0" y="0" width="34" height="46" rx="6" fill="#0F2540"/>
+    <rect x="10" y="46" width="14" height="18" fill="#0F2540"/>
+    <circle cx="10" cy="14" r="3" fill="#8FC1FF"/>
+    <circle cx="24" cy="14" r="3" fill="#8FC1FF"/>
+  </g>
+</svg>

@@ -1,33 +1,31 @@
 {
   "categorias": [
-    { "id": "computadores", "nome": "Computadores e Notebooks", "icone": "icon-computador.svg" },
-    { "id": "perifericos", "nome": "Periféricos", "icone": "icon-periferico.svg" },
-    { "id": "componentes", "nome": "Componentes e Peças", "icone": "icon-componente.svg" },
-    { "id": "acessorios", "nome": "Acessórios", "icone": "icon-acessorio.svg" },
-    { "id": "eletronicos", "nome": "Eletrônicos", "icone": "icon-eletronico.svg" }
+    { "id": "audio", "nome": "Áudio e Som", "icone": "icon-audio.svg" },
+    { "id": "eletronicos", "nome": "Eletrônicos para Casa", "icone": "icon-eletronicos-casa.svg" },
+    { "id": "acessorios-celular", "nome": "Acessórios para Celular e Carro", "icone": "icon-acessorios-celular.svg" },
+    { "id": "mochilas", "nome": "Bolsas e Mochilas", "icone": "icon-mochilas.svg" },
+    { "id": "informatica", "nome": "Informática", "icone": "icon-informatica.svg" }
   ],
   "produtos": [
-    { "id": "notebook-uso-profissional", "categoria": "computadores", "nome": "Notebook para uso profissional", "descricao": "Opções para trabalho e estudo, com bom desempenho no dia a dia.", "imagem": "categoria-computadores.svg" },
-    { "id": "notebook-gamer", "categoria": "computadores", "nome": "Notebook gamer", "descricao": "Configurações com placa de vídeo dedicada para jogos e edição.", "imagem": "categoria-computadores.svg" },
-    { "id": "computador-montado", "categoria": "computadores", "nome": "Computador montado sob medida", "descricao": "Montamos o computador ideal para o seu uso e orçamento.", "imagem": "categoria-computadores.svg" },
-    { "id": "monitor", "categoria": "computadores", "nome": "Monitor", "descricao": "Monitores para escritório, estudo e uso gamer.", "imagem": "categoria-computadores.svg" },
+    { "id": "caixa-som-bluetooth", "categoria": "audio", "nome": "Caixa de som Bluetooth portátil", "descricao": "Modelos portáteis, com opções com luz de LED.", "imagem": "categoria-audio.svg" },
+    { "id": "mini-radio", "categoria": "audio", "nome": "Mini rádio AM/FM", "descricao": "Rádio portátil, ideal para casa, trabalho ou viagem.", "imagem": "categoria-audio.svg" },
+    { "id": "caixa-som-led", "categoria": "audio", "nome": "Caixa de som com efeitos de LED", "descricao": "Para festas e uso no dia a dia, com boa potência de som.", "imagem": "categoria-audio.svg" },
 
-    { "id": "teclado-mouse", "categoria": "perifericos", "nome": "Kit teclado e mouse", "descricao": "Combos com e sem fio, para escritório ou uso gamer.", "imagem": "categoria-perifericos.svg" },
-    { "id": "headset", "categoria": "perifericos", "nome": "Headset com microfone", "descricao": "Ideal para reuniões, aulas online e jogos.", "imagem": "categoria-perifericos.svg" },
-    { "id": "webcam", "categoria": "perifericos", "nome": "Webcam", "descricao": "Para chamadas de vídeo com boa qualidade de imagem.", "imagem": "categoria-perifericos.svg" },
-    { "id": "impressora", "categoria": "perifericos", "nome": "Impressora", "descricao": "Modelos para uso doméstico e de escritório.", "imagem": "categoria-perifericos.svg" },
+    { "id": "tv-box", "categoria": "eletronicos", "nome": "TV Box", "descricao": "Transforma qualquer TV em smart TV, com apps de streaming.", "imagem": "categoria-eletronicos-casa.svg" },
+    { "id": "camera-ip", "categoria": "eletronicos", "nome": "Câmera IP Wi-Fi", "descricao": "Monitoramento residencial ou comercial pelo celular.", "imagem": "categoria-eletronicos-casa.svg" },
+    { "id": "mini-ventilador", "categoria": "eletronicos", "nome": "Mini ventilador portátil", "descricao": "Compacto, ideal para mesa de trabalho ou uso pessoal.", "imagem": "categoria-eletronicos-casa.svg" },
+    { "id": "lanterna-led", "categoria": "eletronicos", "nome": "Lanterna LED", "descricao": "Alta durabilidade, ótima para casa, carro ou trabalho.", "imagem": "categoria-eletronicos-casa.svg" },
+    { "id": "ring-light", "categoria": "eletronicos", "nome": "Ring light para celular", "descricao": "Iluminação para vídeos e fotos, com tripé incluso.", "imagem": "categoria-eletronicos-casa.svg" },
 
-    { "id": "placa-mae", "categoria": "componentes", "nome": "Placa-mãe", "descricao": "Diversos soquetes e modelos para montagem e upgrade.", "imagem": "categoria-componentes.svg" },
-    { "id": "memoria-ram", "categoria": "componentes", "nome": "Memória RAM", "descricao": "Módulos para aumentar a velocidade do seu computador.", "imagem": "categoria-componentes.svg" },
-    { "id": "ssd-hd", "categoria": "componentes", "nome": "SSD e HD", "descricao": "Armazenamento com opções de capacidade para todo tipo de uso.", "imagem": "categoria-componentes.svg" },
-    { "id": "fonte-gabinete", "categoria": "componentes", "nome": "Fonte e gabinete", "descricao": "Peças para montagem completa do seu computador.", "imagem": "categoria-componentes.svg" },
+    { "id": "suporte-veicular", "categoria": "acessorios-celular", "nome": "Suporte veicular para celular", "descricao": "Praticidade e segurança para usar o GPS no trânsito.", "imagem": "categoria-acessorios-celular.svg" },
+    { "id": "controle-remoto", "categoria": "acessorios-celular", "nome": "Controle remoto universal para TV", "descricao": "Substitui controles perdidos ou quebrados, fácil de programar.", "imagem": "categoria-acessorios-celular.svg" },
+    { "id": "capas-peliculas", "categoria": "acessorios-celular", "nome": "Capas e películas para celular", "descricao": "Proteção para diversos modelos de celular.", "imagem": "categoria-acessorios-celular.svg" },
 
-    { "id": "cabos-adaptadores", "categoria": "acessorios", "nome": "Cabos e adaptadores", "descricao": "HDMI, USB, rede e outros, para todo tipo de equipamento.", "imagem": "categoria-acessorios.svg" },
-    { "id": "carregadores", "categoria": "acessorios", "nome": "Carregadores", "descricao": "Para notebook e celular, com opções originais e compatíveis.", "imagem": "categoria-acessorios.svg" },
-    { "id": "pen-drive-cartao", "categoria": "acessorios", "nome": "Pen drive e cartão de memória", "descricao": "Diversas capacidades para guardar seus arquivos.", "imagem": "categoria-acessorios.svg" },
+    { "id": "mochilas-diversas", "categoria": "mochilas", "nome": "Mochilas para notebook e uso diário", "descricao": "Diversos tamanhos e cores, para trabalho, escola ou viagem.", "imagem": "categoria-mochilas.svg" },
+    { "id": "bolsas-diversas", "categoria": "mochilas", "nome": "Bolsas diversas", "descricao": "Modelos variados para o dia a dia.", "imagem": "categoria-mochilas.svg" },
 
-    { "id": "caixa-som", "categoria": "eletronicos", "nome": "Caixa de som Bluetooth", "descricao": "Portáteis e para casa, com boa qualidade de som.", "imagem": "categoria-eletronicos.svg" },
-    { "id": "roteador", "categoria": "eletronicos", "nome": "Roteador Wi-Fi", "descricao": "Para melhorar a internet de casa ou do escritório.", "imagem": "categoria-eletronicos.svg" },
-    { "id": "estabilizador", "categoria": "eletronicos", "nome": "Estabilizador", "descricao": "Proteção para computadores e eletrônicos contra variação de energia.", "imagem": "categoria-eletronicos.svg" }
+    { "id": "cabos-adaptadores", "categoria": "informatica", "nome": "Cabos e adaptadores", "descricao": "HDMI, USB, rede e outros, para todo tipo de equipamento.", "imagem": "categoria-informatica.svg" },
+    { "id": "carregadores", "categoria": "informatica", "nome": "Carregadores", "descricao": "Para notebook e celular, com opções originais e compatíveis.", "imagem": "categoria-informatica.svg" },
+    { "id": "pen-drive-cartao", "categoria": "informatica", "nome": "Pen drive e cartão de memória", "descricao": "Diversas capacidades para guardar seus arquivos.", "imagem": "categoria-informatica.svg" }
   ]
 }

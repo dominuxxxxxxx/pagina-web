@@ -1,13 +1,14 @@
 # JPG Informática — Site
 
-Landing page em português (pt-BR) para a JPG Informática, loja de informática e
-eletrônicos em Pinhais - PR. HTML/CSS/JS estático, sem build, mobile-first.
+Landing page em português (pt-BR) para a JPG Informática, loja de eletrônicos,
+acessórios e variedades em Pinhais - PR (10 anos de bairro). HTML/CSS/JS
+estático, sem build, mobile-first.
 
 ## Estrutura
 
 ```
-index.html                 Página única (hero, sobre nós, produtos, serviços,
-                            depoimentos, localização, contato)
+index.html                 Página única (hero, sobre nós, produtos,
+                            diferenciais, depoimentos, localização, contato)
 assets/css/style.css       Estilos (paleta azul-marinho/cinza com acento
                             laranja, responsivo)
 assets/js/script.js        Interações + carrega o catálogo e os depoimentos
@@ -27,15 +28,20 @@ admin/                     Painel de edição (Decap CMS)
 ## Catálogo de produtos
 
 A seção "Produtos" mostra um catálogo filtrável: abas por categoria (Todos,
-Computadores e Notebooks, Periféricos, Componentes e Peças, Acessórios,
-Eletrônicos) e um grid de cartões — um por produto, com foto, nome, descrição
-curta e um botão de WhatsApp que já vem com a mensagem preenchida citando o
-produto.
+Áudio e Som, Eletrônicos para Casa, Acessórios para Celular e Carro, Bolsas e
+Mochilas, Informática) e um grid de cartões — um por produto, com foto, nome,
+descrição curta e um botão de WhatsApp que já vem com a mensagem preenchida
+citando o produto.
 
-Os produtos de `content/products.json` hoje são **genéricos/ilustrativos**
-(ex.: "Notebook para uso profissional", "Kit teclado e mouse") porque ainda
-não temos o catálogo real com marcas, modelos e fotos da loja. Antes de
-publicar:
+Essas categorias foram definidas a partir do que aparece no Instagram
+[@informaticajpg](https://instagram.com/informaticajpg) (caixas de som,
+rádios, TV Box, câmeras IP, mini ventiladores, suportes veiculares, controles
+remotos, mochilas, cabos/carregadores) e do próprio letreiro da loja
+("Eletrônicos · Informática · Acessórios") — não da suposição inicial de uma
+loja de informática especializada em computadores. Os produtos de
+`content/products.json` ainda são **genéricos/ilustrativos** (ex.: "Caixa de
+som Bluetooth portátil") porque não temos o catálogo real com marcas, modelos
+e preços. Antes de publicar:
 
 - Substitua os produtos de exemplo pelos produtos reais (nome, descrição e,
   se quiser, categoria) — pelo painel `/admin` ou direto no arquivo.
@@ -75,17 +81,16 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 - **Fotos reais dos produtos**: veja a seção "Catálogo de produtos" acima —
   os cartões hoje usam uma imagem de placeholder até que fotos reais sejam
   enviadas pelo painel `/admin`.
-- **Serviços oferecidos**: a seção "Serviços" lista montagem, manutenção,
-  instalação de periféricos e assistência técnica como um ponto de partida
-  comum para lojas do ramo — confirme com o cliente quais serviços
-  realmente são oferecidos e ajuste/remova cards em `index.html` (seção
-  `#servicos`).
 - **Produtos do catálogo**: os produtos em `content/products.json` são
-  exemplos genéricos — ajuste nomes, descrições e categorias para refletir o
-  estoque real da loja (veja "Catálogo de produtos" acima).
-- **Anos de trajetória**: o texto da seção "Sobre nós" evita citar um número
-  específico de anos. Se o cliente quiser destacar isso, adicione a
-  informação em `index.html` (seção `#sobre`).
+  exemplos genéricos — ajuste nomes, descrições, preços e categorias para
+  refletir o estoque real da loja (veja "Catálogo de produtos" acima).
+- **Entrega no bairro**: o site menciona entrega com base em posts do
+  Instagram da loja — confirme com o cliente a região/condições de entrega
+  antes de publicar (`index.html`, seções `#sobre` e `#servicos`).
+- **Reconhecimento da Câmara Municipal de Pinhais**: a seção "Sobre nós"
+  cita a Moção de Louvor vista no Instagram da loja, sem citar o nome da
+  pessoa homenageada — confirme com o cliente se querem destacar isso e como
+  (ou remova, se preferirem não usar).
 - **Domínio**: as tags `canonical` e Open Graph em `index.html`, além de
   `robots.txt` e `sitemap.xml`, usam `https://jpginformatica.com.br/` como
   placeholder — atualize para o domínio real depois da compra/configuração.
@@ -93,9 +98,10 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 ## SEO local
 
 A página inclui dados estruturados (`schema.org/ElectronicsStore`) com
-endereço, coordenadas, horário de funcionamento e avaliação agregada (4,8★
-com 181 avaliações), além de meta tags Open Graph e palavras-chave locais
-("informática Pinhais", "peças de computador", etc.) para ajudar no
+endereço, coordenadas, horário de funcionamento, avaliação agregada (4,8★ com
+181 avaliações) e o reconhecimento da Câmara Municipal, além de meta tags
+Open Graph e palavras-chave locais ("eletrônicos Pinhais", "acessórios para
+celular Pinhais", "loja de variedades Pinhais", etc.) para ajudar no
 posicionamento em buscas e no Google Maps.
 
 ## Analytics (opcional)
@@ -148,9 +154,10 @@ Coisas que ajudam bastante e não dependem de código, só de configuração:
   Google Maps e em buscas como "informática perto de mim". Vale linkar o
   site assim que tiver o domínio definitivo.
 - **Catálogo do WhatsApp Business**: no app do WhatsApp Business, cadastre
-  os produtos e categorias (notebooks, periféricos, peças, acessórios,
-  eletrônicos) com foto e preço em Ferramentas Comerciais > Catálogo —
-  complementa a página e facilita o pedido dentro da própria conversa.
+  os produtos e categorias (áudio e som, eletrônicos, acessórios de celular
+  e carro, mochilas, informática) com foto e preço em Ferramentas Comerciais
+  > Catálogo — complementa a página e facilita o pedido dentro da própria
+  conversa.
 - **Domínio e hospedagem**: registrar `jpginformatica.com.br` (ou similar) e
   publicar em algum host estático (ver seção "Publicar" acima). O
   `netlify.toml` incluso já deixa o deploy no Netlify praticamente
