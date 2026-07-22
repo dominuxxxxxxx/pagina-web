@@ -8,7 +8,8 @@ estático, sem build, mobile-first.
 
 ```
 index.html                 Página única (hero, sobre nós, produtos,
-                            diferenciais, depoimentos, localização, contato)
+                            diferenciais, depoimentos, perguntas frequentes,
+                            localização, contato)
 assets/css/style.css       Estilos (paleta azul-marinho/cinza com acento
                             laranja, responsivo)
 assets/js/script.js        Interações + carrega o catálogo e os depoimentos
@@ -118,6 +119,10 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 - **Domínio**: as tags `canonical` e Open Graph em `index.html`, além de
   `robots.txt` e `sitemap.xml`, usam `https://jpginformatica.com.br/` como
   placeholder — atualize para o domínio real depois da compra/configuração.
+- **Perguntas frequentes (seção `#faq`)**: as respostas sobre entrega
+  (área/prazo) e preços remetem ao WhatsApp de propósito, porque ainda não
+  temos esses detalhes reais. Se o cliente quiser, dá pra deixar mais
+  específico (ex.: "entregamos em tal bairro, taxa de R$X, prazo de Y").
 
 ## SEO local
 
