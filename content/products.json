@@ -1,36 +1,1107 @@
 {
+  "categories": [
+    {
+      "id": "romanticos",
+      "label": "Românticos"
+    },
+    {
+      "id": "rosas-vermelhas",
+      "label": "Buquês de Rosas Vermelhas"
+    },
+    {
+      "id": "rosas-coloridas",
+      "label": "Buquês de Rosas Coloridas"
+    },
+    {
+      "id": "girassol",
+      "label": "Buquê de Girassol"
+    },
+    {
+      "id": "rosa-azul",
+      "label": "Rosa Azul"
+    },
+    {
+      "id": "mix-flores",
+      "label": "Mix de Flores"
+    },
+    {
+      "id": "flores-nobres",
+      "label": "Buquês de Flores Nobres"
+    },
+    {
+      "id": "rosas-chocolates",
+      "label": "Rosas e Chocolates"
+    },
+    {
+      "id": "box-chocolates",
+      "label": "Box Chocolates"
+    },
+    {
+      "id": "cestas-cafe",
+      "label": "Cestas Especiais / Café"
+    },
+    {
+      "id": "flores-unitarias",
+      "label": "Flores Unitárias"
+    }
+  ],
   "items": [
     {
-      "id": "buques",
-      "name": "Buquês de rosas",
-      "description": "Buquês em papel de seda com rosas vermelhas, brancas, coloridas ou girassóis, sempre fresquinhos.",
-      "price": "A partir de R$ 60*",
+      "id": "rosa-simples",
+      "name": "Rosa simples",
+      "description": "Rosa em celofane",
+      "price": 20,
+      "categories": [
+        "romanticos",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Rosa simples (R$ 20)!"
+    },
+    {
+      "id": "rosa-presente",
+      "name": "Rosa presente",
+      "description": "Rosa unitária para presente",
+      "price": 35,
+      "categories": [
+        "romanticos",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Rosa presente (R$ 35)!"
+    },
+    {
+      "id": "girassol-presente",
+      "name": "Girassol presente",
+      "description": "Girassol unitário para presente",
+      "price": 40,
+      "categories": [
+        "romanticos",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Girassol presente (R$ 40)!"
+    },
+    {
+      "id": "mimo-doce",
+      "name": "Mimo doce",
+      "description": "Arranjo unitário de rosa + 1 Ferrero",
+      "price": 45,
+      "categories": [
+        "romanticos",
+        "flores-unitarias"
+      ],
       "image": "assets/img/icon-buque.svg",
-      "whatsappText": "Olá, quero saber mais sobre os buquês de rosas!"
+      "whatsappText": "Olá, tenho interesse no Mimo doce (R$ 45)!"
     },
     {
-      "id": "cestas",
-      "name": "Cestas-presente",
-      "description": "Cestas com flores, chocolates (Ferrero Rocher) e pelúcia — o combo perfeito para presentear com um mimo a mais.",
-      "price": "A partir de R$ 90*",
-      "image": "assets/img/icon-cesta.svg",
-      "whatsappText": "Olá, quero saber mais sobre as cestas-presente!"
+      "id": "rosa-e-mini-pelucia",
+      "name": "Rosa e mini pelúcia",
+      "description": "Rosa unitária + complementos",
+      "price": 85,
+      "categories": [
+        "romanticos",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Rosa e mini pelúcia (R$ 85)!"
     },
     {
-      "id": "arranjos",
-      "name": "Caixas e arranjos",
-      "description": "Flores em caixa ou vaso para decorar ambientes ou presentear com sofisticação.",
-      "price": "A partir de R$ 80*",
+      "id": "buque-de-girassol-p",
+      "name": "Buquê de girassol P",
+      "description": "3 girassóis",
+      "price": 100,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de girassol P (R$ 100)!"
+    },
+    {
+      "id": "buque-especial-p",
+      "name": "Buquê Especial P",
+      "description": "3 rosas e complementos",
+      "price": 110,
+      "categories": [
+        "romanticos",
+        "rosas-vermelhas"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê Especial P (R$ 110)!"
+    },
+    {
+      "id": "love-moments",
+      "name": "Love Moments",
+      "description": "",
+      "price": 110,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Love Moments (R$ 110)!"
+    },
+    {
+      "id": "mix-flower-p-colorido",
+      "name": "Mix Flower P (Colorido)",
+      "description": "",
+      "price": 110,
+      "categories": [
+        "romanticos",
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Mix Flower P (Colorido) (R$ 110)!"
+    },
+    {
+      "id": "a-noite-estrelada-por-van-gogh",
+      "name": "A Noite Estrelada por Van Gogh",
+      "description": "",
+      "price": 120,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no A Noite Estrelada por Van Gogh (R$ 120)!"
+    },
+    {
+      "id": "buque-p-com-chocolate",
+      "name": "Buquê P com Chocolate",
+      "description": "3 rosas + 4 Ferrero Rocher",
+      "price": 130,
+      "categories": [
+        "romanticos",
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê P com Chocolate (R$ 130)!"
+    },
+    {
+      "id": "buque-rosas-e-girassol-m",
+      "name": "Buquê rosas e girassol M",
+      "description": "3 rosas + 3 girassóis",
+      "price": 140,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê rosas e girassol M (R$ 140)!"
+    },
+    {
+      "id": "box-chocolates-p",
+      "name": "Box chocolates P",
+      "description": "",
+      "price": 150,
+      "categories": [
+        "romanticos",
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box chocolates P (R$ 150)!"
+    },
+    {
+      "id": "buque-especial-m",
+      "name": "Buquê Especial M",
+      "description": "Meia dúzia de rosas e complementos",
+      "price": 160,
+      "categories": [
+        "romanticos",
+        "rosas-vermelhas"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê Especial M (R$ 160)!"
+    },
+    {
+      "id": "buque-de-girassol-m",
+      "name": "Buquê de Girassol M",
+      "description": "6 girassóis",
+      "price": 160,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de Girassol M (R$ 160)!"
+    },
+    {
+      "id": "buque-de-rosa-azul",
+      "name": "Buquê de Rosa Azul",
+      "description": "Meia dúzia de rosas azuis",
+      "price": 160,
+      "categories": [
+        "romanticos",
+        "rosa-azul"
+      ],
+      "image": "assets/img/icon-rosa-azul.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de Rosa Azul (R$ 160)!"
+    },
+    {
+      "id": "box-flower-com-balao",
+      "name": "Box Flower com balão",
+      "description": "",
+      "price": 180,
+      "categories": [
+        "romanticos",
+        "mix-flores"
+      ],
       "image": "assets/img/icon-arranjo.svg",
-      "whatsappText": "Olá, quero saber mais sobre caixas e arranjos!"
+      "whatsappText": "Olá, tenho interesse no Box Flower com balão (R$ 180)!"
     },
     {
-      "id": "ocasioes",
-      "name": "Ocasiões especiais",
-      "description": "Aniversário, Dia das Mães, casamento (buquê de noiva) ou condolências — flores para cada momento da vida.",
-      "price": "Sob consulta",
-      "image": "assets/img/icon-ocasioes.svg",
-      "whatsappText": "Olá, quero saber mais sobre flores para ocasiões especiais!"
+      "id": "buque-doce-amor",
+      "name": "Buquê doce amor",
+      "description": "Meia dúzia de rosas + meia dúzia de chocolates",
+      "price": 180,
+      "categories": [
+        "romanticos",
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê doce amor (R$ 180)!"
+    },
+    {
+      "id": "buque-de-rosas-com-ferrero-rocher",
+      "name": "Buquê de rosas com Ferrero Rocher",
+      "description": "Meia dúzia de rosas + meia dúzia de Ferrero",
+      "price": 190,
+      "categories": [
+        "romanticos",
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de rosas com Ferrero Rocher (R$ 190)!"
+    },
+    {
+      "id": "buque-especial-g",
+      "name": "Buquê Especial G",
+      "description": "12 rosas e complementos",
+      "price": 210,
+      "categories": [
+        "romanticos",
+        "rosas-vermelhas"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê Especial G (R$ 210)!"
+    },
+    {
+      "id": "buque-rosas-e-girassol-g",
+      "name": "Buquê rosas e girassol G",
+      "description": "6 rosas + 6 girassóis",
+      "price": 220,
+      "categories": [
+        "romanticos",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê rosas e girassol G (R$ 220)!"
+    },
+    {
+      "id": "buque-rosas-azuis-12-rosas",
+      "name": "Buquê Rosas azuis 12 rosas",
+      "description": "Uma dúzia de rosas azuis tingidas",
+      "price": 230,
+      "categories": [
+        "romanticos",
+        "rosa-azul"
+      ],
+      "image": "assets/img/icon-rosa-azul.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê Rosas azuis 12 rosas (R$ 230)!"
+    },
+    {
+      "id": "box-chocolates-m",
+      "name": "Box chocolates M",
+      "description": "",
+      "price": 250,
+      "categories": [
+        "romanticos",
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box chocolates M (R$ 250)!"
+    },
+    {
+      "id": "buque-com-ferrero-rocher",
+      "name": "Buquê com Ferrero Rocher",
+      "description": "12 rosas vermelhas + Ferrero",
+      "price": 250,
+      "categories": [
+        "romanticos",
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê com Ferrero Rocher (R$ 250)!"
+    },
+    {
+      "id": "buque-de-rosas-g-com-rafaello",
+      "name": "Buquê de rosas G com Rafaello",
+      "description": "12 rosas e 9 Rafaellos",
+      "price": 250,
+      "categories": [
+        "romanticos",
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de rosas G com Rafaello (R$ 250)!"
+    },
+    {
+      "id": "buque-24-rosas-vermelhas",
+      "name": "Buquê 24 rosas vermelhas",
+      "description": "24 rosas vermelhas",
+      "price": 360,
+      "categories": [
+        "romanticos",
+        "rosas-vermelhas"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê 24 rosas vermelhas (R$ 360)!"
+    },
+    {
+      "id": "box-chocolates-g",
+      "name": "Box chocolates G",
+      "description": "",
+      "price": 500,
+      "categories": [
+        "romanticos",
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box chocolates G (R$ 500)!"
+    },
+    {
+      "id": "buque-compacto-rosas-c-urso-m",
+      "name": "Buquê compacto rosas c/urso M",
+      "description": "7 rosas, complemento e um urso",
+      "price": 220,
+      "categories": [
+        "rosas-vermelhas"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê compacto rosas c/urso M (R$ 220)!"
+    },
+    {
+      "id": "dupla-flor",
+      "name": "Dupla Flor",
+      "description": "3 rosas e 3 girassóis",
+      "price": 140,
+      "categories": [
+        "rosas-coloridas",
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Dupla Flor (R$ 140)!"
+    },
+    {
+      "id": "buque-m-rosa-cha",
+      "name": "Buquê M (Rosa chá)",
+      "description": "6 rosas chá, embalagem especial",
+      "price": 150,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê M (Rosa chá) (R$ 150)!"
+    },
+    {
+      "id": "buque-de-rosas-amarelas-com-alstroemerias",
+      "name": "Buquê de rosas amarelas com alstroemerias",
+      "description": "6 rosas amarelas e alstroemerias",
+      "price": 150,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de rosas amarelas com alstroemerias (R$ 150)!"
+    },
+    {
+      "id": "buque-com-rosas-cor-de-rosa-e-alstroemerias",
+      "name": "Buquê com rosas cor de rosa e alstroemerias",
+      "description": "Meia dúzia de rosas cor de rosa",
+      "price": 150,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê com rosas cor de rosa e alstroemerias (R$ 150)!"
+    },
+    {
+      "id": "buque-m-rosas-e-alstro-colorido",
+      "name": "Buquê M Rosas e Alstro (Colorido)",
+      "description": "6 rosas coloridas diversas + alstroemerias",
+      "price": 165,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê M Rosas e Alstro (Colorido) (R$ 165)!"
+    },
+    {
+      "id": "buque-g-rosa-cha",
+      "name": "Buquê G (Rosa chá)",
+      "description": "12 rosas champanhe e complementos",
+      "price": 190,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê G (Rosa chá) (R$ 190)!"
+    },
+    {
+      "id": "buque-de-rosas-cor-de-rosa-g",
+      "name": "Buquê de rosas cor de rosa G",
+      "description": "Embalagem de tela",
+      "price": 190,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de rosas cor de rosa G (R$ 190)!"
+    },
+    {
+      "id": "buque-com-ferrero-e-rosas-coloridas",
+      "name": "Buquê com Ferrero e Rosas coloridas",
+      "description": "Meia dúzia de rosas coloridas + Ferrero",
+      "price": 230,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê com Ferrero e Rosas coloridas (R$ 230)!"
+    },
+    {
+      "id": "buque-degrade",
+      "name": "Buquê Degrade",
+      "description": "20 rosas coloridas, elegante",
+      "price": 300,
+      "categories": [
+        "rosas-coloridas"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê Degrade (R$ 300)!"
+    },
+    {
+      "id": "girassol-noite-estrelada-van-gogh",
+      "name": "Girassol Noite Estrelada Van Gogh",
+      "description": "",
+      "price": 50,
+      "categories": [
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Girassol Noite Estrelada Van Gogh (R$ 50)!"
+    },
+    {
+      "id": "arranjo-ternura",
+      "name": "Arranjo ternura",
+      "description": "Rosa e girassol",
+      "price": 65,
+      "categories": [
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Arranjo ternura (R$ 65)!"
+    },
+    {
+      "id": "mimo-girassol",
+      "name": "Mimo girassol",
+      "description": "Girassol unitário + Ferrero",
+      "price": 75,
+      "categories": [
+        "girassol",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Mimo girassol (R$ 75)!"
+    },
+    {
+      "id": "girassol-com-rosa-azul",
+      "name": "Girassol com rosa azul",
+      "description": "",
+      "price": 75,
+      "categories": [
+        "girassol",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-rosa-azul.svg",
+      "whatsappText": "Olá, tenho interesse no Girassol com rosa azul (R$ 75)!"
+    },
+    {
+      "id": "buque-classico-com-rosas-cha-g",
+      "name": "Buquê clássico com rosas chá G",
+      "description": "6 rosas chá + 6 girassóis",
+      "price": 220,
+      "categories": [
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê clássico com rosas chá G (R$ 220)!"
+    },
+    {
+      "id": "buque-de-girassol-g",
+      "name": "Buquê de girassol G",
+      "description": "12 girassóis",
+      "price": 220,
+      "categories": [
+        "girassol"
+      ],
+      "image": "assets/img/icon-girassol.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê de girassol G (R$ 220)!"
+    },
+    {
+      "id": "rosa-azul-e-ferrero-rocher",
+      "name": "Rosa Azul e Ferrero Rocher",
+      "description": "2 rosas azuis e 3 Ferrero",
+      "price": 80,
+      "categories": [
+        "rosa-azul",
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Rosa Azul e Ferrero Rocher (R$ 80)!"
+    },
+    {
+      "id": "mimo-primavera",
+      "name": "Mimo primavera",
+      "description": "Cone com 4 flores variadas",
+      "price": 75,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Mimo primavera (R$ 75)!"
+    },
+    {
+      "id": "duo-rosa-pink-c-ferrero",
+      "name": "Duo rosa pink c/ferrero",
+      "description": "",
+      "price": 75,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Duo rosa pink c/ferrero (R$ 75)!"
+    },
+    {
+      "id": "mix-flower-p-rosado",
+      "name": "Mix Flower P (Rosado)",
+      "description": "",
+      "price": 130,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Mix Flower P (Rosado) (R$ 130)!"
+    },
+    {
+      "id": "mix-flower-p-amarelo",
+      "name": "Mix Flower P (Amarelo)",
+      "description": "",
+      "price": 140,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Mix Flower P (Amarelo) (R$ 140)!"
+    },
+    {
+      "id": "buque-infantil-c-urso",
+      "name": "Buquê infantil c/urso",
+      "description": "",
+      "price": 150,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê infantil c/urso (R$ 150)!"
+    },
+    {
+      "id": "box-orquidea",
+      "name": "Box orquídea",
+      "description": "",
+      "price": 180,
+      "categories": [
+        "mix-flores",
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Box orquídea (R$ 180)!"
+    },
+    {
+      "id": "mix-flower-m",
+      "name": "Mix Flower M",
+      "description": "",
+      "price": 190,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Mix Flower M (R$ 190)!"
+    },
+    {
+      "id": "florear-do-campo-no-vaso",
+      "name": "Florear do campo no vaso",
+      "description": "Flores do campo em tons de laranja",
+      "price": 190,
+      "categories": [
+        "mix-flores",
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Florear do campo no vaso (R$ 190)!"
+    },
+    {
+      "id": "mix-flower-g",
+      "name": "Mix Flower G",
+      "description": "",
+      "price": 230,
+      "categories": [
+        "mix-flores"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Mix Flower G (R$ 230)!"
+    },
+    {
+      "id": "buque-p-de-alstroemerias",
+      "name": "Buquê P de Alstroemerias",
+      "description": "8 galhos de alstroemerias",
+      "price": 110,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-rosa-colorida.svg",
+      "whatsappText": "Olá, tenho interesse no Buquê P de Alstroemerias (R$ 110)!"
+    },
+    {
+      "id": "cesta-de-flores-do-campo",
+      "name": "Cesta de flores do campo",
+      "description": "Flores diversas",
+      "price": 120,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta de flores do campo (R$ 120)!"
+    },
+    {
+      "id": "cesta-sua-flor",
+      "name": "Cesta Sua Flor",
+      "description": "Cesta P, flores delicadas em tons rosados",
+      "price": 140,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Sua Flor (R$ 140)!"
+    },
+    {
+      "id": "box-primavera",
+      "name": "Box Primavera",
+      "description": "Box de flores variadas coloridas",
+      "price": 160,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Box Primavera (R$ 160)!"
+    },
+    {
+      "id": "flor-de-encanto-com-pelucia",
+      "name": "Flor de encanto com pelúcia",
+      "description": "Flores em tons branco + folhagem + pelúcia",
+      "price": 180,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Flor de encanto com pelúcia (R$ 180)!"
+    },
+    {
+      "id": "florear-rosado",
+      "name": "Florear Rosado",
+      "description": "Flores cor de rosa, ideal para aniversário",
+      "price": 190,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-rosa-vermelha.svg",
+      "whatsappText": "Olá, tenho interesse no Florear Rosado (R$ 190)!"
+    },
+    {
+      "id": "box-flower-com-balao-200",
+      "name": "Box Flower com Balão",
+      "description": "Flores nobres com balão decorado",
+      "price": 200,
+      "categories": [
+        "flores-nobres"
+      ],
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, tenho interesse no Box Flower com Balão (R$ 200)!"
+    },
+    {
+      "id": "arranjo-afeto",
+      "name": "Arranjo Afeto",
+      "description": "2 rosas + Ferrero Rocher",
+      "price": 85,
+      "categories": [
+        "rosas-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Arranjo Afeto (R$ 85)!"
+    },
+    {
+      "id": "mimo-amor",
+      "name": "Mimo Amor",
+      "description": "Caixa de madeira, plaquinha e Ferrero",
+      "price": 65,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Mimo Amor (R$ 65)!"
+    },
+    {
+      "id": "box-romantica-iii",
+      "name": "Box Romântica III",
+      "description": "",
+      "price": 110,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Romântica III (R$ 110)!"
+    },
+    {
+      "id": "cesta-docura",
+      "name": "Cesta Doçura",
+      "description": "Cesta pequena com arranjo",
+      "price": 120,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Doçura (R$ 120)!"
+    },
+    {
+      "id": "box-com-chocolates",
+      "name": "Box com chocolates",
+      "description": "",
+      "price": 120,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box com chocolates (R$ 120)!"
+    },
+    {
+      "id": "box-chocolate-p",
+      "name": "Box Chocolate P",
+      "description": "",
+      "price": 125,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Chocolate P (R$ 125)!"
+    },
+    {
+      "id": "box-chocolate-mimo",
+      "name": "Box Chocolate Mimo",
+      "description": "",
+      "price": 130,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Chocolate Mimo (R$ 130)!"
+    },
+    {
+      "id": "box-incrivel-chocolates",
+      "name": "Box incrível chocolates",
+      "description": "",
+      "price": 130,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box incrível chocolates (R$ 130)!"
+    },
+    {
+      "id": "box-uma-lembranca",
+      "name": "Box Uma Lembrança",
+      "description": "",
+      "price": 140,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Uma Lembrança (R$ 140)!"
+    },
+    {
+      "id": "doce-encontro",
+      "name": "Doce Encontro",
+      "description": "Caixa de MDF",
+      "price": 140,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Doce Encontro (R$ 140)!"
+    },
+    {
+      "id": "box-cacau-show-e-ferrero",
+      "name": "Box Cacau Show e Ferrero",
+      "description": "",
+      "price": 145,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Cacau Show e Ferrero (R$ 145)!"
+    },
+    {
+      "id": "box-emocao",
+      "name": "Box Emoção",
+      "description": "Box cartonada",
+      "price": 150,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Emoção (R$ 150)!"
+    },
+    {
+      "id": "cesta-admiracao",
+      "name": "Cesta Admiração",
+      "description": "Caixa MDF",
+      "price": 150,
+      "categories": [
+        "box-chocolates",
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Admiração (R$ 150)!"
+    },
+    {
+      "id": "box-surpreenda",
+      "name": "Box Surpreenda",
+      "description": "Meia dúzia de rosas + 7 Ferrero",
+      "price": 180,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Surpreenda (R$ 180)!"
+    },
+    {
+      "id": "box-muitos-chocolates",
+      "name": "Box Muitos Chocolates",
+      "description": "",
+      "price": 185,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Box Muitos Chocolates (R$ 185)!"
+    },
+    {
+      "id": "super-caixa-apaixonada",
+      "name": "Super Caixa Apaixonada",
+      "description": "Arranjo de rosas + itens",
+      "price": 300,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Super Caixa Apaixonada (R$ 300)!"
+    },
+    {
+      "id": "caixa-delicias-de-chocolates",
+      "name": "Caixa Delícias de chocolates",
+      "description": "Caixa em MDF",
+      "price": 320,
+      "categories": [
+        "box-chocolates"
+      ],
+      "image": "assets/img/icon-chocolate.svg",
+      "whatsappText": "Olá, tenho interesse no Caixa Delícias de chocolates (R$ 320)!"
+    },
+    {
+      "id": "cesta-cafe-p",
+      "name": "Cesta café P",
+      "description": "Caixa em MDF",
+      "price": 110,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta café P (R$ 110)!"
+    },
+    {
+      "id": "cafe-especial-p",
+      "name": "Café especial P",
+      "description": "Caixa cartonada",
+      "price": 128,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Café especial P (R$ 128)!"
+    },
+    {
+      "id": "cesta-picnic-de-frutas",
+      "name": "Cesta Picnic de Frutas",
+      "description": "10 frutas frescas",
+      "price": 130,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Picnic de Frutas (R$ 130)!"
+    },
+    {
+      "id": "delicias-no-cafe",
+      "name": "Delícias no café",
+      "description": "",
+      "price": 150,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Delícias no café (R$ 150)!"
+    },
+    {
+      "id": "cesta-cafe-i",
+      "name": "Cesta Café I",
+      "description": "Cesta de palha",
+      "price": 150,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Café I (R$ 150)!"
+    },
+    {
+      "id": "cesta-flores-e-frutas",
+      "name": "Cesta flores e frutas",
+      "description": "4 frutas + arranjo",
+      "price": 160,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta flores e frutas (R$ 160)!"
+    },
+    {
+      "id": "cafe-especial-a",
+      "name": "Café Especial A",
+      "description": "Caixa de MDF",
+      "price": 190,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Café Especial A (R$ 190)!"
+    },
+    {
+      "id": "cesta-fresca-especial-i",
+      "name": "Cesta Fresca Especial I",
+      "description": "",
+      "price": 200,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Fresca Especial I (R$ 200)!"
+    },
+    {
+      "id": "bom-dia",
+      "name": "Bom dia!!!",
+      "description": "Arranjo de flores da época",
+      "price": 220,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Bom dia!!! (R$ 220)!"
+    },
+    {
+      "id": "cesta-de-cafe-com-flores",
+      "name": "Cesta de Café com flores",
+      "description": "Cesta de palha",
+      "price": 220,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta de Café com flores (R$ 220)!"
+    },
+    {
+      "id": "cafe-luxo",
+      "name": "Café Luxo",
+      "description": "",
+      "price": 230,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Café Luxo (R$ 230)!"
+    },
+    {
+      "id": "cesta-sagrada-familia",
+      "name": "Cesta Sagrada Família",
+      "description": "",
+      "price": 230,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Sagrada Família (R$ 230)!"
+    },
+    {
+      "id": "cesta-fresca-especial",
+      "name": "Cesta Fresca Especial",
+      "description": "",
+      "price": 250,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Fresca Especial (R$ 250)!"
+    },
+    {
+      "id": "cesta-fresca-especial-310",
+      "name": "Cesta Fresca Especial",
+      "description": "Bandeja MDF decorada",
+      "price": 310,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Cesta Fresca Especial (R$ 310)!"
+    },
+    {
+      "id": "cafe-da-fazenda",
+      "name": "Café da Fazenda",
+      "description": "Frutas, bolo fresco e mais",
+      "price": 320,
+      "categories": [
+        "cestas-cafe"
+      ],
+      "image": "assets/img/icon-cesta-cafe.svg",
+      "whatsappText": "Olá, tenho interesse no Café da Fazenda (R$ 320)!"
+    },
+    {
+      "id": "mimo-infantil",
+      "name": "Mimo Infantil",
+      "description": "2 rosas, ursinho chaveiro e complementos",
+      "price": 60,
+      "categories": [
+        "flores-unitarias"
+      ],
+      "image": "assets/img/icon-buque.svg",
+      "whatsappText": "Olá, tenho interesse no Mimo Infantil (R$ 60)!"
     }
   ]
 }

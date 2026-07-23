@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t9">
+<title id="t9">Chocolates</title>
+<circle cx="60" cy="60" r="58" fill="#F3EFE1"/>
+<rect x="30" y="52" width="60" height="40" rx="5" fill="#8C5A2B"/>
+<rect x="30" y="52" width="60" height="12" fill="#A9713C"/>
+<circle cx="44" cy="76" r="8" fill="#D9A441"/>
+<circle cx="62" cy="80" r="8" fill="#D9A441"/>
+<circle cx="78" cy="72" r="8" fill="#D9A441"/>
+<circle cx="44" cy="76" r="4" fill="#C0834A"/>
+<circle cx="62" cy="80" r="4" fill="#C0834A"/>
+<circle cx="78" cy="72" r="4" fill="#C0834A"/>
+<path d="M60 52v-9M52 47l8-4 8 4" stroke="#D98A93" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

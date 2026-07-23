@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t7">
+<title id="t7">Girassóis</title>
+<circle cx="60" cy="60" r="58" fill="#F3EFE1"/>
+<path d="M60 100l-16-38 16-14 16 14z" fill="#E9DCC3"/>
+<path d="M60 100l-9-40h18z" fill="#D9C8A3"/>
+<g transform="translate(52,44)">
+  <ellipse rx="8" ry="15" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(45)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(90)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(135)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(180)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(225)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(270)" fill="#F4C868"/>
+  <ellipse rx="8" ry="15" transform="rotate(315)" fill="#F4C868"/>
+  <circle r="10" fill="#7A5230"/>
+</g>
+<g transform="translate(78,36)">
+  <ellipse rx="6" ry="11" fill="#F4C868"/>
+  <ellipse rx="6" ry="11" transform="rotate(60)" fill="#F4C868"/>
+  <ellipse rx="6" ry="11" transform="rotate(120)" fill="#F4C868"/>
+  <ellipse rx="6" ry="11" transform="rotate(180)" fill="#F4C868"/>
+  <ellipse rx="6" ry="11" transform="rotate(240)" fill="#F4C868"/>
+  <ellipse rx="6" ry="11" transform="rotate(300)" fill="#F4C868"/>
+  <circle r="7" fill="#7A5230"/>
+</g>
+<path d="M48 50c-4-6-4-12-2-16" stroke="#6B8F71" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

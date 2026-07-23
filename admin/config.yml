@@ -16,10 +16,21 @@ collections:
         name: "products"
         format: "json"
         fields:
+          - label: "Categorias do catálogo (não altere os identificadores)"
+            name: "categories"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - label: "Identificador (não altere)"
+                name: "id"
+                widget: "string"
+              - label: "Nome da categoria"
+                name: "label"
+                widget: "string"
           - label: "Produtos"
             name: "items"
             widget: "list"
-            summary: "{{name}} — {{price}}"
+            summary: "{{name}} — R$ {{price}}"
             fields:
               - label: "Identificador (não altere)"
                 name: "id"
@@ -30,10 +41,27 @@ collections:
               - label: "Descrição"
                 name: "description"
                 widget: "text"
-              - label: "Preço"
+                required: false
+              - label: "Preço (R$)"
                 name: "price"
-                widget: "string"
-                hint: "Ex: A partir de R$ 60*"
+                widget: "number"
+                value_type: "float"
+              - label: "Categorias"
+                name: "categories"
+                widget: "select"
+                multiple: true
+                options:
+                  - { label: "Românticos", value: "romanticos" }
+                  - { label: "Buquês de Rosas Vermelhas", value: "rosas-vermelhas" }
+                  - { label: "Buquês de Rosas Coloridas", value: "rosas-coloridas" }
+                  - { label: "Buquê de Girassol", value: "girassol" }
+                  - { label: "Rosa Azul", value: "rosa-azul" }
+                  - { label: "Mix de Flores", value: "mix-flores" }
+                  - { label: "Buquês de Flores Nobres", value: "flores-nobres" }
+                  - { label: "Rosas e Chocolates", value: "rosas-chocolates" }
+                  - { label: "Box Chocolates", value: "box-chocolates" }
+                  - { label: "Cestas Especiais / Café", value: "cestas-cafe" }
+                  - { label: "Flores Unitárias", value: "flores-unitarias" }
               - label: "Foto"
                 name: "image"
                 widget: "image"

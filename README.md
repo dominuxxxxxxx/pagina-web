@@ -12,10 +12,36 @@ assets/css/style.css     Estilos (paleta rosa/verde-sálvia, responsivo)
 assets/js/script.js      Interações + carrega o catálogo de content/products.json
 assets/img/               Ícones SVG das categorias, logo e favicon
 assets/img/uploads/        Fotos enviadas pelo painel /admin
-content/products.json    Catálogo (nome, descrição, preço, foto) — editável
-                         via /admin ou direto no arquivo
+content/products.json    Catálogo real (93 produtos em 11 categorias, com
+                         preços) — editável via /admin ou direto no arquivo
 admin/                   Painel de edição (Decap CMS)
 ```
+
+## Sobre o catálogo (content/products.json)
+
+O catálogo foi transcrito do catálogo de WhatsApp Business do cliente: 93
+produtos em 11 categorias (Românticos, Rosas Vermelhas, Rosas Coloridas,
+Girassol, Rosa Azul, Mix de Flores, Flores Nobres, Rosas e Chocolates, Box
+Chocolates, Cestas/Café e Flores Unitárias). Cada produto tem uma lista de
+`categories` (pode pertencer a mais de uma, como no catálogo original do
+cliente) e o site mostra chips de filtro por categoria em `#catalogo`.
+
+Pontos para confirmar com o cliente antes de publicar:
+
+- **Preços e descrições precisam de validação** — vieram do catálogo atual
+  do WhatsApp e podem estar desatualizados.
+- **Fotos**: todos os produtos usam ícones ilustrativos por tipo (rosa
+  vermelha, girassol, box de chocolate, etc.), não fotos reais — o cliente
+  tem esse material no Instagram/WhatsApp Business e vale trocar assim que
+  possível, direto pelo painel `/admin`.
+- **Duas pequenas inconsistências no catálogo de origem**, mantidas como
+  estavam para não inventar dados: "Box Flower com balão" aparece em R$ 180
+  (categoria Românticos) e "Box Flower com Balão" em R$ 200 (categoria
+  Flores Nobres) — pode ser o mesmo produto com preço desatualizado em um
+  dos dois lugares. Vale perguntar ao cliente qual valor está certo.
+- Algumas descrições no catálogo de origem estavam cortadas (ex: "Buquê
+  Especial G"); o texto foi resumido para não inventar o final da frase —
+  peça a descrição completa ao cliente se quiser mais detalhe no site.
 
 ## Rodar localmente
 
@@ -38,10 +64,11 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
   (`assets/img/logo.svg`). Troque pela logo real da floricultura, se houver
   uma, mantendo o mesmo nome de arquivo ou atualizando as referências em
   `index.html`.
-- **Fotos reais dos produtos**: o catálogo usa ilustrações SVG de placeholder
-  (buquê, cesta, arranjo, ocasiões especiais). Troque por fotos reais dos
-  arranjos em `assets/img/` (ou pelo painel `/admin`) para melhorar a
-  conversão — há bastante material disponível no Instagram do negócio.
+- **Fotos reais dos produtos**: os 93 produtos do catálogo usam ícones SVG de
+  placeholder por tipo de flor/produto. Troque pelas fotos reais de cada
+  arranjo (ou ao menos das categorias mais vendidas) em `assets/img/` — ou
+  direto pelo painel `/admin` — para melhorar a conversão. Há bastante
+  material no Instagram e no catálogo de WhatsApp Business do negócio.
 - **Domínio**: as tags `canonical` e Open Graph em `index.html` usam
   `https://floreculturapinhais.com.br/` como placeholder — atualize para o
   domínio real depois da compra/configuração.
@@ -49,8 +76,9 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
   mudar, atualize em todas as ocorrências (botão flutuante, header, hero,
   seção de entrega, catálogo e rodapé) e em `WHATSAPP_NUMBER` no
   `assets/js/script.js`.
-- **Preços e fotos do catálogo**: os valores "A partir de R$..." são
-  **ilustrativos** (placeholder). Podem ser atualizados direto pelo painel
+- **Preços do catálogo**: vieram do catálogo de WhatsApp Business atual do
+  cliente — confirme que ainda estão vigentes antes de publicar (ver seção
+  "Sobre o catálogo" acima). Podem ser atualizados direto pelo painel
   `/admin` (veja seção abaixo) ou editando `content/products.json`.
 - **Depoimentos**: os 3 depoimentos na seção "Depoimentos" são **ilustrativos**
   — substitua pelo texto real de avaliações do Google antes de publicar (é

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t5">
+<title id="t5">Rosas vermelhas</title>
+<circle cx="60" cy="60" r="58" fill="#F3EFE1"/>
+<path d="M60 100l-16-38 16-14 16 14z" fill="#E9DCC3"/>
+<path d="M60 100l-9-40h18z" fill="#D9C8A3"/>
+<g transform="translate(48,42)">
+  <ellipse rx="8" ry="15" fill="#C0414F"/>
+  <ellipse rx="8" ry="15" transform="rotate(72)" fill="#D65B69"/>
+  <ellipse rx="8" ry="15" transform="rotate(144)" fill="#C0414F"/>
+  <ellipse rx="8" ry="15" transform="rotate(216)" fill="#D65B69"/>
+  <ellipse rx="8" ry="15" transform="rotate(288)" fill="#C0414F"/>
+  <circle r="6" fill="#8C2530"/>
+</g>
+<g transform="translate(74,34)">
+  <ellipse rx="6" ry="11" fill="#D65B69"/>
+  <ellipse rx="6" ry="11" transform="rotate(72)" fill="#E48A93"/>
+  <ellipse rx="6" ry="11" transform="rotate(144)" fill="#D65B69"/>
+  <ellipse rx="6" ry="11" transform="rotate(216)" fill="#E48A93"/>
+  <ellipse rx="6" ry="11" transform="rotate(288)" fill="#D65B69"/>
+  <circle r="5" fill="#8C2530"/>
+</g>
+<path d="M46 48c-4-6-4-12-2-16M78 32c4-5 4-10 3-14" stroke="#6B8F71" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

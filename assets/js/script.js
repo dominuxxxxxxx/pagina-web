@@ -6,6 +6,8 @@
 var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
 var COOKIE_CONSENT_KEY = 'fc_cookie_consent';
 var WHATSAPP_NUMBER = '5541997317189';
+var currentCategory = 'todos';
+var catalogData = null;
 
 function loadAnalytics() {
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXXX') !== -1) return;
@@ -21,16 +23,33 @@ function loadAnalytics() {
   gtag('config', GA_MEASUREMENT_ID);
 }
 
-// Recria os cards do catálogo a partir de content/products.json, editável
-// pelo painel /admin. Se o arquivo não carregar (offline, JS desativado),
-// os cards estáticos já presentes no HTML permanecem como estão.
+function formatPrice(price) {
+  if (typeof price === 'number') {
+    return 'R$ ' + price.toFixed(2).replace('.', ',').replace(',00', '');
+  }
+  return price || '';
+}
+
+// Desenha os cards do catálogo filtrados pela categoria ativa.
 function renderProducts(items) {
   var grid = document.getElementById('productGrid');
-  if (!grid || !Array.isArray(items) || !items.length) return;
+  if (!grid || !Array.isArray(items)) return;
 
   grid.innerHTML = '';
 
-  items.forEach(function (item) {
+  var visible = items.filter(function (item) {
+    return currentCategory === 'todos' || (item.categories || []).indexOf(currentCategory) !== -1;
+  });
+
+  if (!visible.length) {
+    var empty = document.createElement('p');
+    empty.className = 'product-note';
+    empty.textContent = 'Nenhum produto nessa categoria por enquanto — fale com a gente pelo WhatsApp.';
+    grid.appendChild(empty);
+    return;
+  }
+
+  visible.forEach(function (item) {
     var card = document.createElement('article');
     card.className = 'product-card';
 
@@ -45,14 +64,16 @@ function renderProducts(items) {
     h3.textContent = item.name || '';
     card.appendChild(h3);
 
-    var desc = document.createElement('p');
-    desc.textContent = item.description || '';
-    card.appendChild(desc);
+    if (item.description) {
+      var desc = document.createElement('p');
+      desc.textContent = item.description;
+      card.appendChild(desc);
+    }
 
-    if (item.price) {
+    if (item.price !== undefined && item.price !== null && item.price !== '') {
       var price = document.createElement('span');
       price.className = 'product-price';
-      price.textContent = item.price;
+      price.textContent = formatPrice(item.price);
       card.appendChild(price);
     }
 
@@ -69,6 +90,36 @@ function renderProducts(items) {
   });
 }
 
+// Monta os botões de filtro por categoria a partir de content/products.json.
+function renderFilters(categories, items) {
+  var wrap = document.getElementById('catalogFilters');
+  if (!wrap || !Array.isArray(categories)) return;
+
+  wrap.innerHTML = '';
+
+  function makeChip(id, label, count) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'filter-chip' + (id === currentCategory ? ' is-active' : '');
+    btn.textContent = label + (count !== undefined ? ' (' + count + ')' : '');
+    btn.addEventListener('click', function () {
+      currentCategory = id;
+      wrap.querySelectorAll('.filter-chip').forEach(function (c) { c.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      renderProducts(items);
+      document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    return btn;
+  }
+
+  wrap.appendChild(makeChip('todos', 'Todos', items.length));
+
+  categories.forEach(function (cat) {
+    var count = items.filter(function (item) { return (item.categories || []).indexOf(cat.id) !== -1; }).length;
+    wrap.appendChild(makeChip(cat.id, cat.label, count));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var yearEl = document.getElementById('year');
   if (yearEl) {
@@ -78,9 +129,12 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('content/products.json', { cache: 'no-store' })
     .then(function (res) { return res.ok ? res.json() : null; })
     .then(function (data) {
-      if (data && data.items) renderProducts(data.items);
+      if (!data || !data.items) return;
+      catalogData = data;
+      renderFilters(data.categories || [], data.items);
+      renderProducts(data.items);
     })
-    .catch(function () { /* mantém os cards estáticos do HTML */ });
+    .catch(function () { /* mantém a mensagem de carregando no HTML */ });
 
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieAccept');
