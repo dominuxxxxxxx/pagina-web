@@ -1,18 +1,18 @@
-# Confeitaria Bom Gosto — Site
+# Flor & Cultura Pinhais — Site
 
-Landing page em português (pt-BR) para a Confeitaria Bom Gosto, em Weissópolis,
-Pinhais - PR. HTML/CSS/JS estático, sem build, mobile-first.
+Landing page em português (pt-BR) para a Flor & Cultura Pinhais, floricultura
+em Weissópolis, Pinhais - PR. HTML/CSS/JS estático, sem build, mobile-first.
 
 ## Estrutura
 
 ```
-index.html              Página única (hero, sobre nós, cardápio, encomendas,
-                         localização, contato)
-assets/css/style.css     Estilos (paleta terracota/pastel, responsivo)
-assets/js/script.js      Interações + carrega o cardápio de content/products.json
-assets/img/               Ícones SVG das categorias, favicon e logo
+index.html              Página única (hero, sobre nós, catálogo, como
+                         funciona/entrega, depoimentos, localização, contato)
+assets/css/style.css     Estilos (paleta rosa/verde-sálvia, responsivo)
+assets/js/script.js      Interações + carrega o catálogo de content/products.json
+assets/img/               Ícones SVG das categorias, logo e favicon
 assets/img/uploads/        Fotos enviadas pelo painel /admin
-content/products.json    Cardápio (nome, descrição, preço, foto) — editável
+content/products.json    Catálogo (nome, descrição, preço, foto) — editável
                          via /admin ou direto no arquivo
 admin/                   Painel de edição (Decap CMS)
 ```
@@ -34,26 +34,38 @@ qualquer servidor com PHP/Apache/Nginx). Basta enviar os arquivos da raiz.
 
 ## O que personalizar antes de publicar
 
-- **Fotos reais dos produtos**: hoje o cardápio usa ilustrações SVG de
-  placeholder (bolo, doces, salgados, pavê). Troque por fotos reais dos
-  produtos em `assets/img/` e atualize as tags `<img>` em `index.html`
-  (seção `#cardapio`) para melhorar a conversão.
+- **Logo real**: hoje o site usa um monograma floral em SVG como placeholder
+  (`assets/img/logo.svg`). Troque pela logo real da floricultura, se houver
+  uma, mantendo o mesmo nome de arquivo ou atualizando as referências em
+  `index.html`.
+- **Fotos reais dos produtos**: o catálogo usa ilustrações SVG de placeholder
+  (buquê, cesta, arranjo, ocasiões especiais). Troque por fotos reais dos
+  arranjos em `assets/img/` (ou pelo painel `/admin`) para melhorar a
+  conversão — há bastante material disponível no Instagram do negócio.
 - **Domínio**: as tags `canonical` e Open Graph em `index.html` usam
-  `https://confeitariabomgosto.com.br/` como placeholder — atualize para o
+  `https://floreculturapinhais.com.br/` como placeholder — atualize para o
   domínio real depois da compra/configuração.
-- **WhatsApp**: os links usam `https://wa.me/554136672764`. Se o número
+- **WhatsApp**: os links usam `https://wa.me/5541997317189`. Se o número
   mudar, atualize em todas as ocorrências (botão flutuante, header, hero,
-  seção de encomendas e rodapé).
-- **Preços e fotos do cardápio**: os valores "A partir de R$..." são
+  seção de entrega, catálogo e rodapé) e em `WHATSAPP_NUMBER` no
+  `assets/js/script.js`.
+- **Preços e fotos do catálogo**: os valores "A partir de R$..." são
   **ilustrativos** (placeholder). Podem ser atualizados direto pelo painel
   `/admin` (veja seção abaixo) ou editando `content/products.json`.
+- **Depoimentos**: os 3 depoimentos na seção "Depoimentos" são **ilustrativos**
+  — substitua pelo texto real de avaliações do Google antes de publicar (é
+  uma boa prática não publicar depoimentos atribuídos a clientes reais sem
+  usar o texto que eles de fato escreveram).
 
 ## SEO local
 
-A página inclui dados estruturados (`schema.org/Bakery`) com endereço,
+A página inclui dados estruturados (`schema.org/Florist`) com endereço,
 coordenadas, horário de funcionamento e avaliação agregada, além de meta
-tags Open Graph e palavras-chave locais ("confeitaria Pinhais", "bolos
-Pinhais", etc.) para ajudar no posicionamento em buscas e no Google Maps.
+tags Open Graph e palavras-chave locais ("floricultura Pinhais", "buquê
+Pinhais", "entrega de flores Pinhais", etc.) para ajudar no posicionamento em
+buscas e no Google Maps — a ideia é competir diretamente com as
+floriculturas-intermediárias que hoje aparecem primeiro para "floricultura
+Pinhais" sem terem operação local nem entrega própria.
 
 ## Analytics (opcional)
 
@@ -70,7 +82,7 @@ Analytics 4 prontos, mas desativados até você configurar:
 ## Painel de edição para o dono/a (/admin)
 
 O site usa [Decap CMS](https://decapcms.org) para que quem administra a
-confeitaria consiga editar o cardápio (nome, descrição, preço, foto) sem
+floricultura consiga editar o catálogo (nome, descrição, preço, foto) sem
 mexer em código — tudo pelo navegador, em `seusite.com/admin`. Cada edição
 salva vira um commit automático neste repositório.
 
@@ -84,31 +96,34 @@ deixa o resto pronto). Ative uma única vez:
 3. Em **Identity → Services → Git Gateway**, clique em **Enable Git
    Gateway** (é isso que permite o painel salvar as edições como commits).
 4. Em **Identity → Invite users**, convide o e-mail do dono/a da
-   confeitaria. Ele(a) vai receber um e-mail para definir uma senha e cair
+   floricultura. Ele(a) vai receber um e-mail para definir uma senha e cair
    direto no painel.
 5. Depois disso, é só acessar `seusite.com/admin`, logar, e editar os
-   produtos do cardápio (inclusive trocar as fotos placeholder por fotos
+   produtos do catálogo (inclusive trocar as fotos placeholder por fotos
    reais direto pelo painel, sem precisar de ninguém mexer no código).
 
 Se quiser ampliar o que é editável pelo painel (por exemplo, horário de
-funcionamento ou o texto "Sobre nós"), é só adicionar os campos
+funcionamento, depoimentos ou o texto "Sobre nós"), é só adicionar os campos
 correspondentes em `admin/config.yml` e ligar esses campos no
-`assets/js/script.js` — hoje só o cardápio está conectado ao painel, o
+`assets/js/script.js` — hoje só o catálogo está conectado ao painel, o
 resto do texto do site continua fixo no `index.html`.
 
 ## Passos operacionais (fora do código)
 
 Coisas que ajudam bastante e não dependem de código, só de configuração:
 
-- **Google Business Profile**: reivindique/edite a ficha da confeitaria em
+- **Google Business Profile**: reivindique/edite a ficha da floricultura em
   [business.google.com](https://business.google.com) — é o que aparece no
-  Google Maps e em buscas como "confeitaria perto de mim". Vale linkar o
+  Google Maps e em buscas como "floricultura perto de mim". Vale linkar o
   site assim que tiver o domínio definitivo.
 - **Catálogo do WhatsApp Business**: no app do WhatsApp Business, cadastre
-  os produtos (Bolos, Doces, Salgados, Pavês) com foto e preço em
-  Ferramentas Comerciais > Catálogo — complementa a página e facilita o
-  pedido dentro da própria conversa.
-- **Domínio e hospedagem**: registrar `confeitariabomgosto.com.br` (ou
+  os produtos (Buquês, Cestas, Arranjos, Ocasiões especiais) com foto e
+  preço em Ferramentas Comerciais > Catálogo — complementa a página e
+  facilita o pedido dentro da própria conversa.
+- **Domínio e hospedagem**: registrar `floreculturapinhais.com.br` (ou
   similar) e publicar em algum host estático (ver seção "Publicar" acima).
   O `netlify.toml` incluso já deixa o deploy no Netlify praticamente
   zero-config.
+- **Área e custo de entrega, e-mail de contato e o e-mail do dono/a para o
+  painel /admin**: confirme esses detalhes antes de publicar (não estavam
+  disponíveis no briefing).

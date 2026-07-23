@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t1">
+<title id="t1">Buquês</title>
+<circle cx="60" cy="60" r="58" fill="#F3EFE1"/>
+<path d="M60 100l-16-38 16-14 16 14z" fill="#E9DCC3"/>
+<path d="M60 100l-9-40h18z" fill="#D9C8A3"/>
+<g transform="translate(42,40)">
+  <ellipse rx="7" ry="13" fill="#D98A93"/>
+  <ellipse rx="7" ry="13" transform="rotate(72)" fill="#E3A3AB"/>
+  <ellipse rx="7" ry="13" transform="rotate(144)" fill="#D98A93"/>
+  <ellipse rx="7" ry="13" transform="rotate(216)" fill="#E3A3AB"/>
+  <ellipse rx="7" ry="13" transform="rotate(288)" fill="#D98A93"/>
+  <circle r="6" fill="#F4C868"/>
+</g>
+<g transform="translate(72,34)">
+  <ellipse rx="6" ry="11" fill="#B7CDBA"/>
+  <ellipse rx="6" ry="11" transform="rotate(72)" fill="#CFE0D1"/>
+  <ellipse rx="6" ry="11" transform="rotate(144)" fill="#B7CDBA"/>
+  <ellipse rx="6" ry="11" transform="rotate(216)" fill="#CFE0D1"/>
+  <ellipse rx="6" ry="11" transform="rotate(288)" fill="#B7CDBA"/>
+  <circle r="5" fill="#F4C868"/>
+</g>
+<g transform="translate(58,52)">
+  <ellipse rx="6" ry="11" fill="#EFC2C7"/>
+  <ellipse rx="6" ry="11" transform="rotate(72)" fill="#F6DADD"/>
+  <ellipse rx="6" ry="11" transform="rotate(144)" fill="#EFC2C7"/>
+  <ellipse rx="6" ry="11" transform="rotate(216)" fill="#F6DADD"/>
+  <ellipse rx="6" ry="11" transform="rotate(288)" fill="#EFC2C7"/>
+  <circle r="5" fill="#F4C868"/>
+</g>
+<path d="M46 46c-4-6-4-12-2-16M76 40c4-5 4-10 3-14" stroke="#83A788" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

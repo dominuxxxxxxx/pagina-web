@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://confeitariabomgosto.com.br/sitemap.xml
+Sitemap: https://floreculturapinhais.com.br/sitemap.xml

@@ -1,36 +1,36 @@
 {
   "items": [
     {
-      "id": "bolos",
-      "name": "Bolos",
-      "description": "Bolos artesanais para aniversários, festas e encomendas especiais, com recheios tradicionais e cobertura caprichada.",
-      "price": "A partir de R$ 50*",
-      "image": "assets/img/icon-bolo.svg",
-      "whatsappText": "Olá, quero saber mais sobre os bolos!"
+      "id": "buques",
+      "name": "Buquês",
+      "description": "Buquês frescos e coloridos para presentear, surpreender ou declarar seu carinho em qualquer ocasião.",
+      "price": "A partir de R$ 60*",
+      "image": "assets/img/icon-buque.svg",
+      "whatsappText": "Olá, quero saber mais sobre os buquês!"
     },
     {
-      "id": "doces",
-      "name": "Doces",
-      "description": "Brigadeiros, docinhos de festa e guloseimas tradicionais, feitos com o mesmo capricho de sempre.",
-      "price": "A partir de R$ 35* (cento)",
-      "image": "assets/img/icon-doce.svg",
-      "whatsappText": "Olá, quero saber mais sobre os doces!"
+      "id": "cestas",
+      "name": "Cestas",
+      "description": "Cestas de flores para presentear com estilo — perfeitas para aniversários, boas-vindas e agradecimentos.",
+      "price": "A partir de R$ 90*",
+      "image": "assets/img/icon-cesta.svg",
+      "whatsappText": "Olá, quero saber mais sobre as cestas!"
     },
     {
-      "id": "salgados",
-      "name": "Salgados",
-      "description": "Salgados assados e fritos para festas, coffee break ou aquele lanche da tarde com a família.",
-      "price": "A partir de R$ 30* (cento)",
-      "image": "assets/img/icon-salgado.svg",
-      "whatsappText": "Olá, quero saber mais sobre os salgados!"
+      "id": "arranjos",
+      "name": "Arranjos",
+      "description": "Arranjos florais para decorar ambientes ou presentear com sofisticação, em vaso ou caixa.",
+      "price": "A partir de R$ 80*",
+      "image": "assets/img/icon-arranjo.svg",
+      "whatsappText": "Olá, quero saber mais sobre os arranjos!"
     },
     {
-      "id": "paves",
-      "name": "Pavês",
-      "description": "Pavês cremosos em camadas, a sobremesa queridinha da casa para fechar qualquer celebração com chave de ouro.",
-      "price": "A partir de R$ 25*",
-      "image": "assets/img/icon-pave.svg",
-      "whatsappText": "Olá, quero saber mais sobre os pavês!"
+      "id": "ocasioes",
+      "name": "Ocasiões especiais",
+      "description": "Aniversário, Dia das Mães, casamento (buquê de noiva) ou condolências — flores para cada momento da vida.",
+      "price": "Sob consulta",
+      "image": "assets/img/icon-ocasioes.svg",
+      "whatsappText": "Olá, quero saber mais sobre flores para ocasiões especiais!"
     }
   ]
 }

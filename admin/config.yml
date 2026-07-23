@@ -9,7 +9,7 @@ locale: "pt"
 
 collections:
   - name: "products"
-    label: "Cardápio"
+    label: "Catálogo"
     files:
       - file: "content/products.json"
         label: "Produtos"
@@ -33,7 +33,7 @@ collections:
               - label: "Preço"
                 name: "price"
                 widget: "string"
-                hint: "Ex: A partir de R$ 45*"
+                hint: "Ex: A partir de R$ 60*"
               - label: "Foto"
                 name: "image"
                 widget: "image"

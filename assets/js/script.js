@@ -1,10 +1,11 @@
-// Confeitaria Bom Gosto — interações da página
+// Flor & Cultura Pinhais — interações da página
 
 // Substitua pelo Measurement ID real do Google Analytics 4 quando disponível
 // (Google Analytics > Administrador > Fluxos de dados > Web). Enquanto o ID
 // permanecer com "XXXX", nenhum script de analytics é carregado.
 var GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
-var COOKIE_CONSENT_KEY = 'bg_cookie_consent';
+var COOKIE_CONSENT_KEY = 'fc_cookie_consent';
+var WHATSAPP_NUMBER = '5541997317189';
 
 function loadAnalytics() {
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf('XXXX') !== -1) return;
@@ -20,7 +21,7 @@ function loadAnalytics() {
   gtag('config', GA_MEASUREMENT_ID);
 }
 
-// Recria os cards do cardápio a partir de content/products.json, editável
+// Recria os cards do catálogo a partir de content/products.json, editável
 // pelo painel /admin. Se o arquivo não carregar (offline, JS desativado),
 // os cards estáticos já presentes no HTML permanecem como estão.
 function renderProducts(items) {
@@ -34,8 +35,8 @@ function renderProducts(items) {
     card.className = 'product-card';
 
     var img = document.createElement('img');
-    img.src = item.image || 'assets/img/icon-bolo.svg';
-    img.alt = item.name ? item.name + ' artesanais' : '';
+    img.src = item.image || 'assets/img/icon-buque.svg';
+    img.alt = item.name || '';
     img.width = 96;
     img.height = 96;
     card.appendChild(img);
@@ -60,7 +61,7 @@ function renderProducts(items) {
     link.target = '_blank';
     link.rel = 'noopener';
     var message = item.whatsappText || ('Olá, quero saber mais sobre ' + (item.name || 'os produtos') + '!');
-    link.href = 'https://wa.me/554136672764?text=' + encodeURIComponent(message);
+    link.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
     link.textContent = 'Peça pelo WhatsApp';
     card.appendChild(link);
 
