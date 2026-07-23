@@ -2,27 +2,27 @@
   "items": [
     {
       "id": "buques",
-      "name": "Buquês",
-      "description": "Buquês frescos e coloridos para presentear, surpreender ou declarar seu carinho em qualquer ocasião.",
+      "name": "Buquês de rosas",
+      "description": "Buquês em papel de seda com rosas vermelhas, brancas, coloridas ou girassóis, sempre fresquinhos.",
       "price": "A partir de R$ 60*",
       "image": "assets/img/icon-buque.svg",
-      "whatsappText": "Olá, quero saber mais sobre os buquês!"
+      "whatsappText": "Olá, quero saber mais sobre os buquês de rosas!"
     },
     {
       "id": "cestas",
-      "name": "Cestas",
-      "description": "Cestas de flores para presentear com estilo — perfeitas para aniversários, boas-vindas e agradecimentos.",
+      "name": "Cestas-presente",
+      "description": "Cestas com flores, chocolates (Ferrero Rocher) e pelúcia — o combo perfeito para presentear com um mimo a mais.",
       "price": "A partir de R$ 90*",
       "image": "assets/img/icon-cesta.svg",
-      "whatsappText": "Olá, quero saber mais sobre as cestas!"
+      "whatsappText": "Olá, quero saber mais sobre as cestas-presente!"
     },
     {
       "id": "arranjos",
-      "name": "Arranjos",
-      "description": "Arranjos florais para decorar ambientes ou presentear com sofisticação, em vaso ou caixa.",
+      "name": "Caixas e arranjos",
+      "description": "Flores em caixa ou vaso para decorar ambientes ou presentear com sofisticação.",
       "price": "A partir de R$ 80*",
       "image": "assets/img/icon-arranjo.svg",
-      "whatsappText": "Olá, quero saber mais sobre os arranjos!"
+      "whatsappText": "Olá, quero saber mais sobre caixas e arranjos!"
     },
     {
       "id": "ocasioes",
