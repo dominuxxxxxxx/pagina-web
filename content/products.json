@@ -2,47 +2,58 @@
   "categories": [
     {
       "id": "romanticos",
-      "label": "Românticos"
+      "label": "Românticos",
+      "image": "assets/img/uploads/rosa-e-mini-pelucia.jpg"
     },
     {
       "id": "rosas-vermelhas",
-      "label": "Buquês de Rosas Vermelhas"
+      "label": "Buquês de Rosas Vermelhas",
+      "image": "assets/img/uploads/buque-especial-g.jpg"
     },
     {
       "id": "rosas-coloridas",
-      "label": "Buquês de Rosas Coloridas"
+      "label": "Buquês de Rosas Coloridas",
+      "image": "assets/img/icon-rosa-colorida.svg"
     },
     {
       "id": "girassol",
-      "label": "Buquê de Girassol"
+      "label": "Buquê de Girassol",
+      "image": "assets/img/uploads/buque-de-girassol-p.jpg"
     },
     {
       "id": "rosa-azul",
-      "label": "Rosa Azul"
+      "label": "Rosa Azul",
+      "image": "assets/img/uploads/buque-de-rosa-azul.jpg"
     },
     {
       "id": "mix-flores",
-      "label": "Mix de Flores"
+      "label": "Mix de Flores",
+      "image": "assets/img/uploads/mix-flower-p-colorido.jpg"
     },
     {
       "id": "flores-nobres",
-      "label": "Buquês de Flores Nobres"
+      "label": "Buquês de Flores Nobres",
+      "image": "assets/img/icon-arranjo.svg"
     },
     {
       "id": "rosas-chocolates",
-      "label": "Rosas e Chocolates"
+      "label": "Rosas e Chocolates",
+      "image": "assets/img/uploads/buque-de-rosas-com-ferrero-rocher.jpg"
     },
     {
       "id": "box-chocolates",
-      "label": "Box Chocolates"
+      "label": "Box Chocolates",
+      "image": "assets/img/uploads/box-chocolates-g.jpg"
     },
     {
       "id": "cestas-cafe",
-      "label": "Cestas Especiais / Café"
+      "label": "Cestas Especiais / Café",
+      "image": "assets/img/icon-cesta-cafe.svg"
     },
     {
       "id": "flores-unitarias",
-      "label": "Flores Unitárias"
+      "label": "Flores Unitárias",
+      "image": "assets/img/uploads/rosa-simples.jpg"
     }
   ],
   "items": [

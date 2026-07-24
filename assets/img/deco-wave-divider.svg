@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+<path d="M0,32 C120,10 240,54 360,32 C480,10 600,54 720,32 C840,10 960,54 1080,32 C1200,10 1320,54 1440,32"
+  stroke="#D98A93" stroke-width="2" fill="none" opacity=".55" vector-effect="non-scaling-stroke"/>
+<g transform="translate(180,20)">
+  <ellipse rx="4" ry="7" fill="#D98A93"/>
+  <ellipse rx="4" ry="7" transform="rotate(72)" fill="#E3A3AB"/>
+  <ellipse rx="4" ry="7" transform="rotate(144)" fill="#D98A93"/>
+  <ellipse rx="4" ry="7" transform="rotate(216)" fill="#E3A3AB"/>
+  <ellipse rx="4" ry="7" transform="rotate(288)" fill="#D98A93"/>
+  <circle r="3.2" fill="#D9A441"/>
+</g>
+<g transform="translate(720,44)">
+  <ellipse rx="3.4" ry="6" fill="#83A788"/>
+  <ellipse rx="3.4" ry="6" transform="rotate(72)" fill="#B7CDBA"/>
+  <ellipse rx="3.4" ry="6" transform="rotate(144)" fill="#83A788"/>
+  <ellipse rx="3.4" ry="6" transform="rotate(216)" fill="#B7CDBA"/>
+  <ellipse rx="3.4" ry="6" transform="rotate(288)" fill="#83A788"/>
+  <circle r="2.8" fill="#D9A441"/>
+</g>
+<g transform="translate(1260,20)">
+  <ellipse rx="4" ry="7" fill="#D98A93"/>
+  <ellipse rx="4" ry="7" transform="rotate(72)" fill="#E3A3AB"/>
+  <ellipse rx="4" ry="7" transform="rotate(144)" fill="#D98A93"/>
+  <ellipse rx="4" ry="7" transform="rotate(216)" fill="#E3A3AB"/>
+  <ellipse rx="4" ry="7" transform="rotate(288)" fill="#D98A93"/>
+  <circle r="3.2" fill="#D9A441"/>
+</g>
+</svg>
