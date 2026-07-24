@@ -86,6 +86,32 @@ p { margin: 0 0 1em; }
   padding: 72px 0;
 }
 
+#entrega {
+  position: relative;
+  overflow: hidden;
+}
+
+#entrega::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background: url("../img/uploads/mix-flower-p-colorido.jpg") center 25% / cover no-repeat;
+  filter: blur(30px) saturate(1.1);
+  transform: scale(1.15);
+}
+
+#entrega::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 251, 248, 0.88);
+}
+
+#entrega .container {
+  position: relative;
+  z-index: 1;
+}
+
 .section-alt {
   background: url("../img/deco-pattern.svg") repeat, var(--color-bg-alt);
 }
@@ -233,11 +259,27 @@ p { margin: 0 0 1em; }
 .hero {
   position: relative;
   padding: 56px 0 64px;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(217, 138, 147, 0.10), transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(107, 143, 113, 0.14), transparent 45%),
-    var(--color-bg);
+  background: var(--color-bg);
   overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background: url("../img/uploads/buque-especial-g.jpg") center 30% / cover no-repeat;
+  filter: blur(28px) saturate(1.15);
+  transform: scale(1.15);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(217, 138, 147, 0.12), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(107, 143, 113, 0.16), transparent 45%),
+    rgba(255, 251, 248, 0.86);
 }
 
 /* ---------- Decorative florals ---------- */
@@ -247,7 +289,7 @@ p { margin: 0 0 1em; }
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .deco-item {
@@ -286,7 +328,7 @@ p { margin: 0 0 1em; }
 
 .hero .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   gap: 40px;
   align-items: center;
