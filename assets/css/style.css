@@ -96,7 +96,7 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: -30px;
   background: url("../img/uploads/mix-flower-p-colorido.jpg") center 25% / cover no-repeat;
-  filter: blur(30px) saturate(1.1);
+  filter: blur(38px) saturate(1.2);
   transform: scale(1.15);
 }
 
@@ -104,10 +104,88 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 251, 248, 0.88);
+  background: rgba(255, 251, 248, 0.68);
 }
 
 #entrega .container {
+  position: relative;
+  z-index: 1;
+}
+
+#sobre {
+  position: relative;
+  overflow: hidden;
+}
+
+#sobre::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background: url("../img/uploads/girassol-presente.jpg") center 30% / cover no-repeat;
+  filter: blur(38px) saturate(1.2);
+  transform: scale(1.15);
+}
+
+#sobre::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 251, 248, 0.68);
+}
+
+#sobre .container {
+  position: relative;
+  z-index: 1;
+}
+
+#depoimentos {
+  position: relative;
+  overflow: hidden;
+}
+
+#depoimentos::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background: url("../img/uploads/buque-rosas-e-girassol-g.jpg") center 30% / cover no-repeat;
+  filter: blur(38px) saturate(1.2);
+  transform: scale(1.15);
+}
+
+#depoimentos::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(243, 239, 225, 0.72);
+}
+
+#depoimentos .container {
+  position: relative;
+  z-index: 1;
+}
+
+#localizacao {
+  position: relative;
+  overflow: hidden;
+}
+
+#localizacao::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background: url("../img/uploads/buque-doce-amor.jpg") center 30% / cover no-repeat;
+  filter: blur(38px) saturate(1.2);
+  transform: scale(1.15);
+}
+
+#localizacao::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 251, 248, 0.68);
+}
+
+#localizacao .container {
   position: relative;
   z-index: 1;
 }
@@ -268,7 +346,7 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: -30px;
   background: url("../img/uploads/buque-especial-g.jpg") center 30% / cover no-repeat;
-  filter: blur(28px) saturate(1.15);
+  filter: blur(38px) saturate(1.25);
   transform: scale(1.15);
 }
 
@@ -277,9 +355,9 @@ p { margin: 0 0 1em; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(217, 138, 147, 0.12), transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(107, 143, 113, 0.16), transparent 45%),
-    rgba(255, 251, 248, 0.86);
+    radial-gradient(circle at 15% 20%, rgba(217, 138, 147, 0.08), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(107, 143, 113, 0.1), transparent 45%),
+    rgba(255, 251, 248, 0.68);
 }
 
 /* ---------- Decorative florals ---------- */
