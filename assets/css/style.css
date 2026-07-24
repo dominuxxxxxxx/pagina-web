@@ -104,7 +104,7 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 251, 248, 0.82);
+  background: rgba(255, 251, 248, 0.7);
 }
 
 #entrega .container {
@@ -130,7 +130,7 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 251, 248, 0.82);
+  background: rgba(255, 251, 248, 0.7);
 }
 
 #sobre .container {
@@ -156,7 +156,7 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(243, 239, 225, 0.84);
+  background: rgba(243, 239, 225, 0.74);
 }
 
 #depoimentos .container {
@@ -182,7 +182,7 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 251, 248, 0.82);
+  background: rgba(255, 251, 248, 0.7);
 }
 
 #localizacao .container {
@@ -357,7 +357,7 @@ p { margin: 0 0 1em; }
   background:
     radial-gradient(circle at 15% 20%, rgba(217, 138, 147, 0.08), transparent 40%),
     radial-gradient(circle at 90% 10%, rgba(107, 143, 113, 0.1), transparent 45%),
-    rgba(255, 251, 248, 0.82);
+    rgba(255, 251, 248, 0.7);
 }
 
 /* ---------- Decorative florals ---------- */
