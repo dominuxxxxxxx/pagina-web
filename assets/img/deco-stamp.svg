@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+<defs>
+  <path id="stampTextTop" d="M 20,80 A 60,60 0 0 1 140,80" />
+  <path id="stampTextBottom" d="M 32,110 A 46,46 0 0 0 128,110" />
+</defs>
+<circle cx="80" cy="80" r="74" fill="#FBEFE9"/>
+<circle cx="80" cy="80" r="74" fill="none" stroke="#D98A93" stroke-width="2" stroke-dasharray="3 5" opacity=".8"/>
+<circle cx="80" cy="80" r="62" fill="none" stroke="#D98A93" stroke-width="1.4" opacity=".6"/>
+<text font-family="Georgia, serif" font-size="14.5" letter-spacing="2.5" fill="#B96570" font-weight="700">
+  <textPath href="#stampTextTop" startOffset="50%" text-anchor="middle">FEITO À MÃO</textPath>
+</text>
+<text font-family="Georgia, serif" font-size="10.5" letter-spacing="3" fill="#B96570" font-weight="700">
+  <textPath href="#stampTextBottom" startOffset="50%" text-anchor="middle">COM CARINHO</textPath>
+</text>
+<g transform="translate(80,78)">
+  <ellipse rx="8" ry="15" fill="#D98A93"/>
+  <ellipse rx="8" ry="15" transform="rotate(72)" fill="#E3A3AB"/>
+  <ellipse rx="8" ry="15" transform="rotate(144)" fill="#D98A93"/>
+  <ellipse rx="8" ry="15" transform="rotate(216)" fill="#E3A3AB"/>
+  <ellipse rx="8" ry="15" transform="rotate(288)" fill="#D98A93"/>
+  <circle r="6.5" fill="#D9A441"/>
+</g>
+</svg>

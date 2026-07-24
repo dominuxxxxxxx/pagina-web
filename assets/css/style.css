@@ -567,6 +567,30 @@ p { margin: 0 0 1em; }
   }
 }
 
+.about-figure-wrap {
+  position: relative;
+}
+
+.about-stamp {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  width: 96px;
+  height: 96px;
+  transform: rotate(-11deg);
+  filter: drop-shadow(0 6px 14px rgba(107, 74, 43, 0.25));
+  z-index: 2;
+}
+
+@media (min-width: 700px) {
+  .about-stamp {
+    width: 118px;
+    height: 118px;
+    top: -26px;
+    right: -26px;
+  }
+}
+
 .about-figure {
   position: relative;
   background: linear-gradient(160deg, var(--color-green) 0%, var(--color-green-dark) 100%);
@@ -1011,6 +1035,51 @@ p { margin: 0 0 1em; }
 .hours-table td { padding: 3px 0; color: var(--color-text-light); }
 .hours-table td:last-child { text-align: right; font-weight: 700; color: var(--color-brown); }
 .hours-table tr.closed td:last-child { color: var(--color-rose-dark); }
+
+/* ---------- Vitrine (carrossel) ---------- */
+
+.marquee-wrap {
+  overflow: hidden;
+  background: var(--color-cream);
+  padding: 28px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marqueeScroll 50s linear infinite;
+}
+
+.marquee-wrap:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+
+.marquee-track img:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    overflow-x: auto;
+  }
+}
 
 /* ---------- Footer ---------- */
 
