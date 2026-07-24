@@ -56,26 +56,31 @@ function renderProducts(items) {
     var img = document.createElement('img');
     img.src = item.image || 'assets/img/icon-buque.svg';
     img.alt = item.name || '';
-    img.width = 96;
-    img.height = 96;
     img.className = 'lightbox-trigger';
     card.appendChild(img);
 
+    var scrim = document.createElement('div');
+    scrim.className = 'product-card-scrim';
+    card.appendChild(scrim);
+
+    var body = document.createElement('div');
+    body.className = 'product-card-body';
+
     var h3 = document.createElement('h3');
     h3.textContent = item.name || '';
-    card.appendChild(h3);
+    body.appendChild(h3);
 
     if (item.description) {
       var desc = document.createElement('p');
       desc.textContent = item.description;
-      card.appendChild(desc);
+      body.appendChild(desc);
     }
 
     if (item.price !== undefined && item.price !== null && item.price !== '') {
       var price = document.createElement('span');
       price.className = 'product-price';
       price.textContent = formatPrice(item.price);
-      card.appendChild(price);
+      body.appendChild(price);
     }
 
     var link = document.createElement('a');
@@ -85,8 +90,9 @@ function renderProducts(items) {
     var message = item.whatsappText || ('Olá, quero saber mais sobre ' + (item.name || 'os produtos') + '!');
     link.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
     link.textContent = 'Peça pelo WhatsApp';
-    card.appendChild(link);
+    body.appendChild(link);
 
+    card.appendChild(body);
     grid.appendChild(card);
   });
 }
