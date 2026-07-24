@@ -57,6 +57,9 @@ function renderProducts(items) {
     img.src = item.image || 'assets/img/icon-buque.svg';
     img.alt = item.name || '';
     img.className = 'lightbox-trigger';
+    if (item.description) {
+      img.dataset.description = item.description;
+    }
     card.appendChild(img);
 
     var scrim = document.createElement('div');
@@ -69,12 +72,6 @@ function renderProducts(items) {
     var h3 = document.createElement('h3');
     h3.textContent = item.name || '';
     body.appendChild(h3);
-
-    if (item.description) {
-      var desc = document.createElement('p');
-      desc.textContent = item.description;
-      body.appendChild(desc);
-    }
 
     if (item.price !== undefined && item.price !== null && item.price !== '') {
       var price = document.createElement('span');
@@ -173,11 +170,26 @@ document.addEventListener('DOMContentLoaded', function () {
   var lightbox = document.getElementById('lightbox');
   var lightboxImg = document.getElementById('lightboxImg');
   var lightboxClose = document.getElementById('lightboxClose');
+  var lightboxCaption = document.getElementById('lightboxCaption');
 
-  function openLightbox(src, alt) {
+  function openLightbox(src, alt, description) {
     if (!lightbox || !lightboxImg) return;
     lightboxImg.src = src;
     lightboxImg.alt = alt || '';
+    if (lightboxCaption) {
+      lightboxCaption.innerHTML = '';
+      if (alt) {
+        var name = document.createElement('strong');
+        name.textContent = alt;
+        lightboxCaption.appendChild(name);
+      }
+      if (description) {
+        var desc = document.createElement('span');
+        desc.textContent = description;
+        lightboxCaption.appendChild(desc);
+      }
+      lightboxCaption.classList.toggle('is-visible', !!(alt || description));
+    }
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   }
@@ -191,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest && e.target.closest('.lightbox-trigger');
     if (trigger) {
-      openLightbox(trigger.src, trigger.alt);
+      openLightbox(trigger.src, trigger.alt, trigger.dataset.description);
     }
   });
 
