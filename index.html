@@ -150,10 +150,10 @@
       <div class="hero-visual">
         <div class="hero-visual-ring" aria-hidden="true"></div>
         <div class="hero-visual-card">
-          <div class="mini-icon"><img src="assets/img/uploads/buque-especial-g.jpg" alt="Buquê de rosas" width="80" height="80"></div>
-          <div class="mini-icon"><img src="assets/img/uploads/box-chocolates-g.jpg" alt="Cesta-presente" width="80" height="80"></div>
-          <div class="mini-icon"><img src="assets/img/uploads/mix-flower-p-colorido.jpg" alt="Mix de flores" width="80" height="80"></div>
-          <div class="mini-icon"><img src="assets/img/uploads/buque-de-rosa-azul.jpg" alt="Flores para ocasiões" width="80" height="80"></div>
+          <div class="mini-icon"><img src="assets/img/uploads/buque-especial-g.jpg" alt="Buquê de rosas" width="80" height="80" class="lightbox-trigger"></div>
+          <div class="mini-icon"><img src="assets/img/uploads/box-chocolates-g.jpg" alt="Cesta-presente" width="80" height="80" class="lightbox-trigger"></div>
+          <div class="mini-icon"><img src="assets/img/uploads/mix-flower-p-colorido.jpg" alt="Mix de flores" width="80" height="80" class="lightbox-trigger"></div>
+          <div class="mini-icon"><img src="assets/img/uploads/buque-de-rosa-azul.jpg" alt="Flores para ocasiões" width="80" height="80" class="lightbox-trigger"></div>
         </div>
       </div>
     </div>
@@ -413,6 +413,13 @@
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
   <p>Usamos cookies para melhorar sua experiência no site. Ao continuar navegando, você concorda com isso.</p>
   <button type="button" class="btn btn-outline btn-sm" id="cookieAccept">Entendi</button>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Fechar foto">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <img src="" alt="" id="lightboxImg">
 </div>
 
 <!-- Netlify Identity: redireciona convites de e-mail para o painel /admin -->

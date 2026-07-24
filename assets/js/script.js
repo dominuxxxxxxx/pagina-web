@@ -58,6 +58,7 @@ function renderProducts(items) {
     img.alt = item.name || '';
     img.width = 96;
     img.height = 96;
+    img.className = 'lightbox-trigger';
     card.appendChild(img);
 
     var h3 = document.createElement('h3');
@@ -150,5 +151,44 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
     banner.classList.remove('is-visible');
     loadAnalytics();
+  });
+
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  var lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, alt) {
+    if (!lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest && e.target.closest('.lightbox-trigger');
+    if (trigger) {
+      openLightbox(trigger.src, trigger.alt);
+    }
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  if (lightbox) {
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
   });
 });
